@@ -1,0 +1,30 @@
+.header{
+          grid-area: header;
+    text-align: left;
+    float: left;
+      }
+
+.header-right{
+    grid-area: header-right;
+    text-align: right;
+    float: right;
+}
+
+.menu{
+    height: 100%;
+    width: 200px;
+    position: fixed;
+}
+
+.main{
+    margin-left: 220px;
+    position: fixed;
+    height: 100%;
+}
+
+.grid-container{
+    grid-gap: 10px;
+    background-color: #2196F3;
+    padding: 10px;
+    height: 20px;
+}
