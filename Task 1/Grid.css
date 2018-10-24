@@ -1,32 +1,59 @@
-.header{
+.header {
     grid-gap: 10px;
     padding: 10px;
     height: 40px;
 }
 
-.header-left{
+.header-left {
     float: left;
-      }
+}
 
-.header-right{
+.header-right {
     float: right;
 }
 
-.menu{
-    height: 100%;
-    width: 200px;
+.menu {
+    width: 150px;
     position: fixed;
 }
 
-.main{
-    margin-left: 220px;
-    position: fixed;
-    height: 100%;
+.menu-top {
 }
 
-.grid-container{
+.main {
+    margin-left: 170px;
+}
+
+.main-top {
+}
+
+.main-top-left {
+    float: left;
+}
+
+.main-top-right {
+    float: right;
+}
+
+.grid-container {
     grid-gap: 10px;
     background-color: #2196F3;
     padding: 10px;
     height: 20px;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #2196F3;
+}
+
+th,td{
+    border: #ccc 1px solid;
+    padding: 5px 10px;
 }
