@@ -1,12 +1,14 @@
 .header{
-          grid-area: header;
-    text-align: left;
+    grid-gap: 10px;
+    padding: 10px;
+    height: 40px;
+}
+
+.header-left{
     float: left;
       }
 
 .header-right{
-    grid-area: header-right;
-    text-align: right;
     float: right;
 }
 
