@@ -1,5 +1,5 @@
 body{
-    font-family:OpenSansRegular;
+margin: 0;
     display: grid;
     min-height: 100vh;
     grid-template-rows: min-content 1fr;
@@ -52,6 +52,7 @@ text-align: center;
 }
 .Name{
     text.align: Middle;
+    font-family:OpenSansRegular;
 }
 .Russia{
     width: 7%;

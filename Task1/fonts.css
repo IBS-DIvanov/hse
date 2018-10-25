@@ -1,6 +1,4 @@
 @font-face{
-font-family: 'OpenSansRegular';
-src: url('../../resources/fonts/OpenSansRegular.eot');
-src: url('../../resources/fonts/OpenSansRegular.woff') format('woff'),
-     url('../../resources/fonts/OpenSansRegular.ttf') format('truetype');
+font-family: OpenSansRegular;
+src: url(../resources/fonts/OpenSansRegular.ttf);
 }
