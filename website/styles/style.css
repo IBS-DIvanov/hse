@@ -1,10 +1,12 @@
 body {
     font-family:OpenSans;
 
+    margin: 0;
+
     display: grid;
     min-height: 100vh;
     grid-template-columns: min-content 1fr;
-    grid-template-rows: min-content 1fr ;
+    grid-template-rows: min-content min-content ;
 }
 
 header {
@@ -15,10 +17,13 @@ header {
     grid-template-columns: auto auto;
 
     white-space: nowrap;
-    line-height: auto
+    line-height: auto;
+
+    background: linear-gradient(to top, #d7e5f5, #fff) !important;
+    color: #5a7696;
  }
 
- main .header {
+main div.header {
      padding: 5px 0 5px 0;
      display: grid;
      grid-template-columns: 1fr auto;
@@ -47,19 +52,20 @@ main .right {
 nav {
     grid-row: 2;
     grid-column: 1;
-    padding: 0 10px;
-    background: #bbb;
+
+    background: #375d88;
 }
 main {
     grid-row: 2;
     grid-column: 2;
-    padding: 0 20px;
-    background: #eee;
+
+    background: #2f5179;
+    color: #00b0ff;
 }
 
 header > * > *,
-main .header > * >*{
-    margin: 2px;
+main div.header > * >*{
+    margin: 0 5px 0 8px;
 }
 
 .upperCase{
@@ -67,16 +73,39 @@ main .header > * >*{
 }
 
 .logo{
-    width: 7%;
+    width: 6%;
     height: auto
 }
 
 .accountPhoto{
-    width: 7%;
+    width: 6%;
     height: auto
 }
 
 img.back{
     width: 1.5%;
     height: auto
+}
+
+.table {
+    width: inherit;
+    height: 650px;
+    overflow: auto;
+}
+
+table th{
+    position: sticky;
+    top: 0;
+    background: #29486a;
+}
+
+table th,
+table td,
+.region,
+.date{
+    color: #fff;
+}
+
+td img {
+    width: 30px
 }
