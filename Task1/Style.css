@@ -1,5 +1,5 @@
 body{
-    font-family:OpenSans;
+    font-family:OpenSansRegular;
     display: grid;
     min-height: 100vh;
     grid-template-rows: min-content 1fr;
@@ -13,9 +13,13 @@ header{
 }
 .header__logo{
     float: left;
+    display: flex;
+    align-items: center;
 }
 .header__login{
     float: right;
+    display: flex;
+    align-items: center;
 }
 nav {
     grid-row: 2;
@@ -41,7 +45,7 @@ table{
 }
 th{
 font-size: 9pt;
-text-align: center;
+text-align: right;
 }
 td{
 text-align: center;
