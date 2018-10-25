@@ -1,4 +1,4 @@
-.header {
+/*.header {
     grid-gap: 10px;
     padding: 10px;
     height: 40px;
@@ -55,5 +55,51 @@ table{
 
 th,td{
     border: #ccc 1px solid;
-    padding: 5px 10px;
+}*/
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+section {
+    display: grid;
+    grid-columns: 200px 1fr;
+    grid-rows: 50px 1fr;
+}
+
+section header {
+    grid-column: 1/3;
+    grid-row: 1;
+    background-color: #E8F0FA;
+    padding: 7px 8px 2px;
+}
+
+section nav {
+    grid-column: 1;
+    grid-row: 2;
+    background-color: red;
+    padding: 25px;
+}
+
+section article {
+    grid-column: 2;
+    grid-row: 2;
+    background-color: blue;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+.td-img {
+    text-align: center;
+}
+
+td{
+    vertical-align: top;
 }
