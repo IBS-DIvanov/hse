@@ -3,7 +3,7 @@ body {
     padding: 0;
     display: grid;
     min-height: 100vh;
-    grid-template-columns: min-content 1fr;
+    grid-template-columns: 220px 1fr;
     grid-template-rows: min-content 1fr;
     font-family: Regular;
 }
@@ -19,7 +19,8 @@ nav {
     grid-column: 1;
     grid-row: 2;
     background: #375D88;
-    padding: 25px;
+    padding-left: 25px;
+    padding-right: 25px;
     color: #98C8EC;
 }
 
@@ -28,6 +29,16 @@ article {
     grid-row: 2;
     background: #2F5179;
     height: 100%;
+}
+
+.box{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 12px;
+}
+
+.top{
+    height: 40px;
 }
 
 .left {
@@ -39,6 +50,8 @@ article {
 
 .right {
     float: right;
+
+    font-size: 12px;
 
     display: flex;
     align-items: center;
@@ -54,6 +67,7 @@ table {
 }
 
 td {
+    font-size: 13px;
     vertical-align: top;
     background-color: #4B7CB4;
     border-right: 1px solid #98C8FF;
@@ -61,6 +75,7 @@ td {
 }
 
 th {
+    font-size: 12px;
     vertical-align: top;
     text-align: left;
     font-weight: 100;
@@ -72,14 +87,23 @@ a {
     text-decoration: none;
 }
 
-select{
-    background: #4B7CB4;
+select {
+    background: #4E7EB7;
     width: 150px;
     height: 25px;
     color: white;
     border: 0;
 }
 
-input{
+input {
     color: white;
+    background-color: #7BA8DB;
+}
+
+
+hr {
+    border: none; /* Убираем границу */
+    background-color: #547DAB; /* Цвет линии */
+    height: 1px; /* Толщина линии */
+    padding: 0;
 }

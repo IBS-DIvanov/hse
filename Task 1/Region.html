@@ -21,82 +21,110 @@
 </header>
 
 <nav>
-    Фильтры
+    <div class="top" style="padding-top: 15px"> Фильтры</div>
 
-    <br>
+    <hr>
 
-    ФИО
-    <select>
-        <option>Все</option>
-    </select>
+    <div class="box">
+        ФИО
+        <select>
+            <option>Все</option>
+        </select>
 
-    Социальный номер
-    <select>
-        <option>Все</option>
-    </select>
+        <br><br>
 
-    Округ
-    <select>
-        <option>Центральный федеральный</option>
-    </select>
+        Социальный номер
+        <select>
+            <option>Все</option>
+        </select>
+    </div>
 
-    Субьект
-    <select>
-        <option>Адыгея</option>
-    </select>
+    <hr>
 
-    Гражданство
-    <select>
-        <option>Российская Федерация</option>
-    </select>
+    <div class="box">
+        Округ
+        <select>
+            <option>Центральный федеральный</option>
+        </select>
 
-    Возраст
-    <select>
-        <option>Не выбрано</option>
-    </select>
+        <br><br>
 
-    Пол
-    <font color="white">Мужской</font>
-    <input type="radio" name="gender">
-    <font color="white">Женский</font>
-    <input type="radio" name="gender">
+        Субьект
+        <select>
+            <option>Адыгея</option>
+        </select>
 
-    Семейное положение
-    <font color="white">В браке</font>
-    <input type="radio" name="familyStatus">
-    <font color="white">Не в браке</font>
-    <input type="radio" name="familyStatus">
+        <br><br>
 
-    Инвалидность
-    <font color="white">Есть</font>
-    <input type="radio" name="disability">
-    <font color="white">Нет</font>
-    <input type="radio" name="disability">
+        Гражданство
+        <select>
+            <option>Российская Федерация</option>
+        </select>
 
-    Занятость
-    <select>
-        <option>Работает</option>
-    </select>
+        <br><br>
 
-    Образование
-    <select>
-        <option>Дошкольное</option>
-    </select>
+        Возраст
+        <select>
+            <option>Не выбрано</option>
+        </select>
+
+        <br><br>
+
+        Пол<br>
+        <font color="white">Мужской</font>
+        <input type="radio" name="gender" checked>
+        <font color="white">Женский</font>
+        <input type="radio" name="gender">
+
+        <br><br>
+
+        Семейное положение<br>
+        <font color="white">В браке</font>
+        <input type="radio" name="familyStatus" checked>
+        <font color="white">Не в браке</font>
+        <input type="radio" name="familyStatus">
+
+        <br><br>
+
+        Инвалидность<br>
+        <font color="white">Есть</font>
+        <input type="radio" name="disability" checked>
+        <font color="white">Нет</font>
+        <input type="radio" name="disability">
+    </div>
+
+    <hr>
+
+    <div class="box">
+        Занятость
+        <select>
+            <option>Работает</option>
+        </select>
+
+        <br><br>
+
+        Образование
+        <select>
+            <option>Дошкольное</option>
+        </select>
+    </div>
 </nav>
 
 <article>
-    <div class="left" style="padding: 15px">
-        <a href="Region.html" style="display: flex; align-items: center;">
-            <img src="/hse/resources/images/icons/nav-back.svg" height="20">
-            <font style="color: #00A7E1; font-size: 13px"> Назад</font>
-        </a>
-        <font style="color: white; padding: 0 8px">СВЕРДЛОВСКАЯ ОБЛ</font>
-        <font style="color: #91C2FB;"> 4 794 745 чел.</font>
-    </div>
+    <div class="top">
+        <div class="left" style="padding: 15px">
+            <a href="Region.html" style="display: flex; align-items: center;">
+                <img src="/hse/resources/images/icons/nav-back.svg" height="20">
+                <font style="color: #00A7E1; font-size: 13px"> Назад</font>
+            </a>
+            <font style="color: white; padding: 0 8px">СВЕРДЛОВСКАЯ ОБЛ</font>
+            <font style="color: #91C2FB;"> 4 794 745 чел.</font>
+        </div>
 
-    <div class="right" style="padding: 15px">
-        <font style="color: white">27.09.20017</font>
-        <img src="/hse/resources/images/icons/callendar.svg" height="20" style="padding-left: 15px">
+        <div class="right" style="padding: 15px">
+            <font style="color: white">27.09.20017</font>
+            <img src="/hse/resources/images/icons/callendar.svg" height="20" style="padding-left: 15px">
+        </div>
     </div>
 
     <table style="width: 100%">
@@ -149,7 +177,7 @@
             <th>
                 Доход
             </th>
-            <th>
+            <th class="td-img">
                 <img src="/hse/resources/images/icons/nav-place.svg" height="20">
             </th>
         </tr>
