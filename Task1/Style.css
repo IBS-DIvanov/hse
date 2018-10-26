@@ -44,20 +44,27 @@ font-family: OpenSansSemiBold;
 .main_table{
     width: 100%;
     color: white;
+    border-spacing: 0;
+    font-family: OpenSansSemiBold;
 }
-th{
-    vertical-align: center;
-    font-size: 9pt;
+.main_table th{
+    vertical-align: top;
+    font-size: 10px;
     text-align: left;
     background-color: #29486A;
-    height: 50px;
     position: sticky;
     top: 0;
+    border-right: 1px solid #4B7CB4;
+    padding: 10px 10px 10px 10px;
 }
-td{
-vertical-align: top;
+.main_table td{
+    vertical-align: top;
     text-align: left;
     background-color: #4B7CB4;
+    border-right: 1px solid #98C8FF;
+    border-top: 1px solid #29486A;
+    font-size: 13px;
+    padding: 10px 10px 5px 10px;
 }
 .Name{
     text.align: Middle;
@@ -111,7 +118,7 @@ a{
 .date{
     color: white;
 }
-.td_pic {
+.main_table td.td_pic {
     text-align: center;
 }
 nav {
