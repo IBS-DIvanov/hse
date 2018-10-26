@@ -29,7 +29,8 @@ header {
      display: grid;
      grid-template-columns: 1fr auto;  color: #4B7CB3!important;
  }
-
+.main_scrolled {
+background: white!important;}
 header .left,
 main .left{
     grid-column: 1;
@@ -170,5 +171,9 @@ color: #4B7CB3!important;
 height: 1px;
 
 }
-.scrolltitle {
-color: 4985DB!important;}
+div .scrolltitle {
+font-family: Verdana, sans-serif;
+font-size:10px;
+
+color: #DBBC1E!important;
+}
