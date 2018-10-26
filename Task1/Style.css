@@ -157,14 +157,16 @@ color: white;
 }
 .menu_radio{
 color: white;}
+
+.menu_radio tr{
+}
 .menu_radio td{
     width:100px;
-    text-align: right;
     background:#375D88;
-    font-size: 10px;
-}
-radio{
+    font-size: 9px;
+        text-align: right;
 
 }
+
 
 
