@@ -22,7 +22,7 @@ header {
     color: #5a7696;
  }
 
-main div.header {
+main .header {
      padding: 5px 0 5px 0;
 
      height: 40px;
@@ -31,8 +31,7 @@ main div.header {
      grid-template-columns: 1fr auto;
  }
 
-header .left,
-main .left{
+.left{
     grid-column: 1;
 
     display:flex;
@@ -41,8 +40,7 @@ main .left{
 }
 
 
-header .right,
-main .right {
+.right{
     grid-column: 2;
 
     display:flex;
@@ -118,7 +116,7 @@ nav {
     color:#98c8ff;
 }
 
- nav div.header {
+ nav .header {
     vertical-align:middle;
     text-align:center;
 
@@ -131,18 +129,18 @@ nav {
     border-bottom: 1px solid #98c8ff;
  }
 
-nav .main > div{
+nav .filters > div{
     margin:10px;
     padding: 10px;
     border-bottom: 1px solid #547dab
 }
 
-nav .main .radio{
+nav .filters .radio{
     font-size: 13px;
     color:#fff;
 }
 
-nav .main .radio td{
+nav .filters .radio td{
     width:100px;
     text-align: right;
 }
