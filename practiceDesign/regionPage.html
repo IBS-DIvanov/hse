@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Область</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/font.css">
+</head>
+<body>
+    <header class="first-header">
+        <div class = header-left>
+            <img src="../resources/images/russia.svg" class="logo"/>
+            <span class="logo__title">ФЕДЕРАЛЬНЫЙ РЕСУРС О НАСЕЛЕНИИ</span>
+        </div>
+        <div class = header-right>
+            <span class="account-name">Борисов Сергей Викторович</span>
+            <img src="../resources/images/avatar/avatar-header.svg" class="account-avatar" />
+        </div>
+    </header>
+    <section>
+        <nav>
+        <nav class="nav__top">
+            <h1>Фильтры</h1>
+        </nav>
+        <nav class="nav__bottom">
+            <div class="nav__bottom__div">
+                <div>
+                    <span>ФИО</span><br>
+                    <select title="ФИО">
+                        <option>Все</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <span>Социальный номер</span><br>
+                    <select title="Социальный номер">
+                        <option>Все</option>
+                    </select>
+                </div>
+            </div>
+            <hr/>
+            <div class="nav__bottom__div">
+                <div>
+                    <span>Округ</span><br>
+                    <select title="Округ">
+                        <option>Центральный федеральный округ</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <span>Субъект</span><br>
+                    <select title="Субъект">
+                        <option>Адыгея</option>
+                    </select>
+                </div>
+            </div>
+            <hr/>
+            <div class="nav__bottom__div">
+                <div>
+                    <span>Гражданство</span><br>
+                    <select title="Гражданство">
+                        <option>Российская Федерация</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <span>Возраст</span><br>
+                    <select title="Возраст">
+                        <option>Не выбрано</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <span>Пол</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="gender1">Мужской</label><input title="Мужской" name="gender" id="gender1" type="radio" checked></td>
+                            <td><label for="gender2">Женский</label><input title="Женский" name="gender" id="gender2" type="radio"></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div>
+                    <span>Семейное положение</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="marital1">В браке</label><input title="В браке" name="marital" id="marital1" type="radio" checked></td>
+                            <td><label for="marital2">Не в браке</label><input title="Не в браке" name="marital" id="marital2" type="radio"></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div>
+                    <span>Инвалидность</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="disability1">Есть</label><input title="Есть" name="disability" id="disability1" type="radio" checked></td>
+                            <td><label for="disability2">Нет</label><input title="Нет" name="disability" id="disability2" type="radio"></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+            <hr/>
+            <div class="nav__bottom__div">
+                <div>
+                    <span>Занятость</span><br>
+                    <select title="Занятость">
+                        <option>Работает</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <span>Образование</span><br>
+                    <select title="Образование">
+                        <option>Дошкольное</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <span>Доходы</span><br>
+                    <select title="Доходы">
+                        <option>До 15 т.р.</option>
+                    </select>
+                </div>
+                <br>
+                <div>
+                    <span>Военнообязанность</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="military1">Есть</label><input title="Есть" name="military" id="military1" type="radio"></td>
+                            <td><label for="military2">Нет</label><input title="Нет" name="military" id="military2" type="radio" checked></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div>
+                    <span>Предприниматель</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="entrepreneur1">Да</label><input title="Есть" name="entrepreneur" id="entrepreneur1" type="radio"></td>
+                            <td><label for="entrepreneur2">Нет</label><input title="Нет" name="entrepreneur" id="entrepreneur2" type="radio" checked></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div>
+                    <span>Владение землей</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="ground1">Есть</label><input title="Есть" name="ground" id="ground1" type="radio"></td>
+                            <td><label for="ground2">Нет</label><input title="Нет" name="ground" id="ground2" type="radio" checked></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div>
+                    <span>Владение недвижимостью</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="realty1">Есть</label><input title="Есть" name="realty" id="realty1" type="radio"></td>
+                            <td><label for="realty2">Нет</label><input title="Нет" name="realty" id="realty2" type="radio" checked></td>
+                        </tr>
+                    </table>
+                </div>
+                <br>
+                <div>
+                    <span>Владение автомобилем</span><br>
+                    <table class="nav__bottom__radio-table">
+                        <tr>
+                            <td><label for="car1">Есть</label><input title="Есть" name="car" id="car1" type="radio"></td>
+                            <td><label for="car2">Нет</label><input title="Нет" name="car" id="car2" type="radio" checked></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </nav>
+        </nav>
+        <main class="main__top">
+            <header class="main-header">
+                <div class="header-left">
+                    <img src="../resources/images/icons/nav-back.svg" class="main__top__back-image"/>
+                    <a class="main__top__back-text" href="regionPage.html">Назад</a>
+                    <span class="main__top__region">СВЕРДЛОВСКАЯ ОБЛ</span>
+                    <span class="main__top__population">4 794 745 чел.</span>
+                </div>
+                <div class="header-right">
+                    <div id="date" class="main__top__date-text"></div>
+                    <img src="../resources/images/icons/nav-date.svg" class="main__top__date-image"/>
+                </div>
+            </header>
+        </main>
+        <main class="main__bottom">
+            <table class="main__table">
+                <tr>
+                    <th class="text-center">№</th>
+                    <th>Фото</th>
+                    <th>Социальный номер</th>
+                    <th>Фамилия Имя Отчество</th>
+                    <th>Возраст</th>
+                    <th>Пол</th>
+                    <th>Семейное положение</th>
+                    <th>Военнообязанность</th>
+                    <th>Занятость</th>
+                    <th>Инвалидность</th>
+                    <th>Предприниматель</th>
+                    <th>Образование</th>
+                    <th>Земля</th>
+                    <th>Недвижимость</th>
+                    <th>Автомобиль</th>
+                    <th>Доход</th>
+                    <th><img src="../resources/images/icons/nav-place.svg"></th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td><img src="../resources/images/avatar/man.svg"/></td>
+                    <td>1001-6019-9038</td>
+                    <td>Ковалев Сергей Иванович</td>
+                    <td>52</td>
+                    <td><img src="../resources/images/icons/person-man.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-married.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-army.svg" class="main__table__icons"/></td>
+                    <td>Работает</td>
+                    <td><img src="../resources/images/icons/person-disability.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-business.svg" class="main__table__icons"/></td>
+                    <td>Среднее</td>
+                    <td><img src="../resources/images/icons/person-hasLand.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-hasProperty.svg" class="main__table__icons"/></td>
+                    <td><img src="../resources/images/icons/person-car.svg" class="main__table__icons"/></td>
+                    <td>77 983</td>
+                    <td></td>
+                </tr>
+            </table>
+        </main>
+    </section>
+</body>
+</html>
+<script>
+    var d = new Date();
+    var month = d.getMonth() + 1;
+    if (month < 10) month = '0' + month;
+    var day = d.getDate();
+    if (day < 10) day = '0' + day;
+    var year = d.getFullYear();
+    document.getElementById('date').innerHTML = day + '.' + month + '.' + year;
+</script>
