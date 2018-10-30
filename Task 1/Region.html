@@ -21,89 +21,78 @@
 </header>
 
 <nav>
-    <div class="top" style="padding-top: 15px"> Фильтры</div>
+    <div class="header">
+        Фильтры
+    </div>
 
-    <hr>
-    <div class="scroll">
-        <div class="box">
-            ФИО
+    <div class="filters scroll">
+        <div>
+            <div> ФИО</div>
             <select>
                 <option>Все</option>
             </select>
 
-            <br><br>
-
-            Социальный номер
+            <div>Социальный номер</div>
             <select>
                 <option>Все</option>
             </select>
         </div>
 
-        <hr>
-
-        <div class="box">
-            Округ
+        <div>
+            <div> Округ</div>
             <select>
                 <option>Центральный федеральный</option>
             </select>
 
-            <br><br>
-
-            Субьект
+            <div> Субьект</div>
             <select>
                 <option>Адыгея</option>
             </select>
+        </div>
 
-            <br><br>
-
-            Гражданство
+        <div>
+            <div>Гражданство</div>
             <select>
                 <option>Российская Федерация</option>
             </select>
 
-            <br><br>
-
-            Возраст
+            <div> Возраст</div>
             <select>
                 <option>Не выбрано</option>
             </select>
 
-            <br><br>
+            <div>Пол</div>
+            <table class="radio">
+                <tr>
+                    <td>Мужской <input type="radio" name="gender" checked></td>
+                    <td> Женский <input type="radio" name="gender"></td>
+                </tr>
+            </table>
 
-            Пол<br>
-            <font color="white">Мужской</font>
-            <input type="radio" name="gender" checked>
-            <font color="white">Женский</font>
-            <input type="radio" name="gender">
+            <div> Семейное положение</div>
+            <table class="radio">
+                <tr>
+                    <td>В браке <input type="radio" name="familyStatus" checked></td>
+                    <td>Не в браке <input type="radio" name="familyStatus"></td>
+                </tr>
+            </table>
 
-            <br><br>
-
-            Семейное положение<br>
-            <font color="white">В браке</font>
-            <input type="radio" name="familyStatus" checked>
-            <font color="white">Не в браке</font>
-            <input type="radio" name="familyStatus">
-
-            <br><br>
-
-            Инвалидность<br>
-            <font color="white">Есть</font>
-            <input type="radio" name="disability" checked>
-            <font color="white">Нет</font>
-            <input type="radio" name="disability">
+            <div> Инвалидность</div>
+            <table class="radio">
+                <tr>
+                    <td>Есть <input type="radio" name="disability" checked></td>
+                    <td>Нет <input type="radio" name="disability"></td>
+                </tr>
+            </table>
         </div>
 
-        <hr>
-
-        <div class="box">
-            Занятость
+        <div>
+            <div>Занятость</div>
             <select>
                 <option>Работает</option>
             </select>
 
-            <br><br>
-
-            Образование
+            <div> Образование</div>
             <select>
                 <option>Дошкольное</option>
             </select>
@@ -112,17 +101,17 @@
 </nav>
 
 <article>
-    <div class="top">
-        <div class="left" style="padding: 15px">
+    <div class="header">
+        <div class="left" style="padding-left: 15px">
             <a href="Region.html" style="display: flex; align-items: center;">
                 <img src="/hse/resources/images/icons/nav-back.svg" height="20">
                 <font style="color: #00A7E1; font-size: 13px"> Назад</font>
             </a>
-            <font style="color: white; padding: 0 8px">СВЕРДЛОВСКАЯ ОБЛ</font>
+            <font style="color: white; padding-right: 8px; padding-left: 8px">СВЕРДЛОВСКАЯ ОБЛ</font>
             <font style="color: #91C2FB;"> 4 794 745 чел.</font>
         </div>
 
-        <div class="right" style="padding: 15px">
+        <div class="right" style="padding-right: 15px">
             <font style="color: white">27.09.20017</font>
             <img src="/hse/resources/images/icons/callendar.svg" height="20" style="padding-left: 15px">
         </div>
