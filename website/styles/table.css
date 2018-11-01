@@ -1,0 +1,13 @@
+table th{
+    position: sticky;
+    top: 0;
+    background: #29486a;
+}
+
+table th,
+table td{
+    color: #fff;
+}
+
+td img {
+}

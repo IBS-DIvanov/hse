@@ -1,0 +1,22 @@
+nav .filters > div{
+    margin:10px;
+    padding: 10px;
+    border-bottom: 1px solid #547dab
+}
+
+nav .filters .radio{
+    font-size: 13px;
+    color:#fff;
+}
+
+nav .filters .radio td{
+    width:100px;
+    text-align: right;
+}
+
+nav .filters select{
+    width:100%;
+
+    background:#4e7eb7;
+    color: #fff;
+}

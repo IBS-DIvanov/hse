@@ -5,6 +5,9 @@
     <title>My title</title>
     <link rel="stylesheet" href="./styles/fonts.css">
     <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/table.css">
+    <link rel="stylesheet" href="./styles/utils.css">
+    <link rel="stylesheet" href="./styles/filters.css">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
 </head>
 <body >
@@ -20,7 +23,7 @@
     </header>
     <nav>
         <div class="header">Фильтры</div>
-        <div class="filters scrolled">
+        <div class="content filters scrolled">
             <div>
                 <div>ФИО</div>
                 <select>
@@ -102,7 +105,7 @@
                 <img src="../resources/images/icons/nav-date.svg">
             </div>
         </div>
-        <div class="table scrolled">
+        <div class="content scrolled">
             <table id="dataTable">
                 <thead>
                     <tr>
@@ -128,15 +131,14 @@
                 <tbody>
 
                 </tbody>
-
             </table>
         </div>
     </main>
 </body>
 
 <script>
-    $().ready(
-        function(){
+    
+        function lol(){
             $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json",
                 function( data ) {
                     $.each(data,
@@ -179,7 +181,7 @@
                 }
             );
         }
-    );
+        $().ready(()=>{lol();lol();lol();lol();lol();lol();lol();});
 </script>
 </html>
 

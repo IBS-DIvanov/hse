@@ -1,0 +1,27 @@
+.upperCase{
+    text-transform:uppercase
+}
+
+.logo{
+    width: 6%;
+    height: auto
+}
+
+.accountPhoto{
+    width: 6%;
+    height: auto
+}
+
+img.back{
+    width: 1.5%;
+    height: auto
+}
+
+.scrolled {
+    overflow: auto;
+}
+
+.region,
+.date{
+    color: #fff;
+}

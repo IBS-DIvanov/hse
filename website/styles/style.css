@@ -5,38 +5,10 @@ body {
 
     display: grid;
     min-height: 100vh;
-    grid-template-columns: 250px 1fr;
-    grid-template-rows: min-content 1fr ;
+    grid-template-columns: 10vw 90vw;
+    grid-template-rows: 10vh 90vh;
 
-    overflow:hidden;
-}
-
-header {
-    position:sticky;
-    top: 0 !important;
-    z-index:1;
-
-    padding: 5px 0 5px 7px;
-    grid-column: 1/3;
-
-    display: grid;
-    grid-template-columns: auto auto;
-
-    white-space: nowrap;
-
-    background: linear-gradient(to top, #d7e5f5, #fff) !important;
-    color: #5a7696;
-}
-
-main .header, nav .header {
-     padding: 5px 0 5px 0;
-
-     height: 40px;
-}
-
-main .header{
-     display: grid;
-     grid-template-columns: 1fr auto;
+    overflow-y:hidden;
 }
 
 .left{
@@ -54,65 +26,29 @@ main .header{
     display:flex;
     align-items:center;
     justify-content:flex-end
-
 }
 
+header {
+    position:sticky;
+    top: 0 !important;
+    z-index:1;
+
+    padding: 5px 0 5px 7px;
+    grid-column: 1/3;
+
+    display: grid;
+    grid-template-columns: auto auto;
+
+    background: linear-gradient(to top, #d7e5f5, #fff) !important;
+    color: #5a7696;
+}
 
 main {
     grid-row: 2;
     grid-column: 2;
 
-    display:flex;
-    flex-direction: column;
-    align-items:stretch;
-
     background: #2f5179;
     color: #00b0ff;
-}
-
-header > * > *,
-main div.header > * >*{
-    margin: 0 5px 0 8px;
-}
-
-.upperCase{
-    text-transform:uppercase
-}
-
-.logo{
-    width: 6%;
-    height: auto
-}
-
-.accountPhoto{
-    width: 6%;
-    height: auto
-}
-
-img.back{
-    width: 1.5%;
-    height: auto
-}
-
-.scrolled {
-    overflow: auto;
-}
-
-table th{
-    position: sticky;
-    top: 0;
-    background: #29486a;
-}
-
-table th,
-table td,
-.region,
-.date{
-    color: #fff;
-}
-
-td img {
-    width: 30px
 }
 
 nav {
@@ -123,37 +59,41 @@ nav {
     color:#98c8ff;
 }
 
- nav .header {
+main,
+nav{
+    display:grid;
+    grid-template-rows: 5vh 85vh;
+}
+
+main .header, 
+nav .header {
+    grid-row: 1;
+
+    padding: 5px 0 5px 0;
+}
+
+main .header{
+    display: grid;
+    grid-template-columns: auto auto;
+}
+
+nav .header {
     vertical-align:middle;
     text-align:center;
 
     display:flex;
+    justify-content: center;
     align-items:center;
 
-    padding-left: 20px;
-
     border-bottom: 1px solid #98c8ff;
- }
-
-nav .filters > div{
-    margin:10px;
-    padding: 10px;
-    border-bottom: 1px solid #547dab
 }
 
-nav .filters .radio{
-    font-size: 13px;
-    color:#fff;
+main .content,
+nav .content{
+    grid-row: 2;
 }
 
-nav .filters .radio td{
-    width:100px;
-    text-align: right;
-}
-
-select{
-    width:100%;
-
-    background:#4e7eb7;
-    color: #fff;
+header > * > *,
+main div.header > * >*{
+    margin: 0 5px 0 8px;
 }
