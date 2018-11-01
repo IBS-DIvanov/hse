@@ -137,8 +137,8 @@
 </body>
 
 <script>
-    
-        function lol(){
+    $().ready(()=>
+        {
             $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json",
                 function( data ) {
                     $.each(data,
@@ -181,7 +181,7 @@
                 }
             );
         }
-        $().ready(()=>{lol();lol();lol();lol();lol();lol();lol();});
+    );
 </script>
 </html>
 
