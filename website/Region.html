@@ -148,9 +148,7 @@
                             tr.append("<td>"+e.original.number+"</td>");
                             tr.append("<td>"+e.original.name+"</td>");
                             tr.append("<td>"+age_count(new Date(e.original.birthday))+"</td>");
-                            if (e.original.gender == "woman")
-                                tr.append("<td><img src='../resources/images/icons/person-woman.svg'></td>")
-                            else tr.append("<td><img src='../resources/images/icons/person-man.svg'></td>");
+                            tr.append("<td><img src='../resources/images/icons/person-"+e.original.gender+".svg'></td>")
                             tr.append("<td>"+(e.original.married?"<img src='../resources/images/icons/person-married.svg'":"")+"</td>");
                             tr.append("<td>"+(e.original.reservist?"<img src='../resources/images/icons/person-army.svg'":"")+"</td>");
                             tr.append("<td>"+(e.original.employment?"Работает":"Не работает")+"</td>");
