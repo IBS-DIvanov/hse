@@ -5,6 +5,7 @@
     <title>Область</title>
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./Style.css">
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
 </head>
 <body>
 <header>
@@ -136,58 +137,61 @@
         </tr>
     </table>
     <script type="text/javascript">
-    function() {
-        $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json", function (data) {
-            var i = 0;
-            $.each(data, function (key, value) {
-                $('#peoples').append('<tr><td> class="td_pic"' + (i++) + '</td>');
-                if (value.original.gender == "woman")
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/avatar/woman.svg" height="30"></td>')
-                else $('#peoples').append('<td class="td_pic"><img src="../resources/images/avatar/avatar-header.svg" height="30"></td>');
-                $('#peoples').append('<td>' + value.original.number + '</td>');
-                $('#peoples').append('<td>' + value.original.name + '</td>');
-                $('#peoples').append('<td>' + Age(new Date(value.original.birthday)) + "</td>");
-                if (value.original.gender == "woman")
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-woman.svg" height="20"></td>')
-                else $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-man.svg" height="20"></td>');
-                if (value.original.married)
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-married.svg" height="20"></td>')
-                else $('#peoples').append('<td class="td_pic"></td>');
-                if (value.original.reservist)
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-army.svg" height="20"></td>')
-                else $('#peoples').append('<td class="td_pic"></td>');
-                if (value.original.employment)
-                    $('#peoples').append('<td>' + "Работает" + '</td>')
-                else $('#peoples').append('<td>' + "Не работает" + '</td>');
-                if (value.original.disability)
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-disability.svg" height="20"></td>')
-                else $('#peoples').append('<td class="td_pic"></td>');
-                if (value.original.business)
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-business.svg" height="20"></td>')
-                else $('#peoples').append('<td class="td_pic"></td>');
-                $('#peoples').append('<td></td>');
-                if (value.original.hasLand)
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-hasLand.svg" height="20"></td>')
-                else $('#peoples').append('<td class="td_pic"></td>');
-                if (value.original.hasProperty)
-                    $('#peoples').append('<td class="td_pic"><img src="../resources/images/icons/person-hasProperty.svg" height="20"></td>')
-                else $('#peoples').append('<td class="td_pic"></td>');
-                $('#peoples').append('<td></td>');
-                $('#peoples').append('<td>' + value.original.income + '</td>');
-                $('#peoples').append('<td></td></tr>');
-
-            });
-            function Age(b) {
-                var now = new Date();
-                var a = now.getFullYear() - b.getFullYear();
-                var m = now.getMonth() - b.getMonth();
-                if (m < 0 || (m === 0 && now.getDate() < b.getDate())) {
-                    a--;
-                }
-                return a;
+        $().ready(
+            function () {
+                $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json", function (data) {
+                    var i = 1;
+                    $.each(data, function (key, value) {
+                        var stroka = $('<tr></tr>');
+                        stroka.append('<td class="td_pic">' + (i++) + '</td>');
+                        if (value.original.gender == "woman")
+                            stroka.append('<td class="td_pic"><img src="../resources/images/avatar/woman.svg" height="30"></td>')
+                        else stroka.append('<td class="td_pic"><img src="../resources/images/avatar/avatar-header.svg" height="30"></td>');
+                        stroka.append('<td>' + value.original.number + '</td>');
+                        stroka.append('<td>' + value.original.name + '</td>');
+                        stroka.append('<td>' + Age(new Date(value.original.birthday)) + '</td>');
+                        if (value.original.gender == "woman")
+                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-woman.svg" height="20"></td>')
+                        else stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-man.svg" height="20"></td>');
+                        if (value.original.married)
+                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-married.svg" height="20"></td>')
+                        else stroka.append('<td class="td_pic"></td>');
+                        if (value.original.reservist)
+                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-army.svg" height="20"></td>')
+                        else stroka.append('<td class="td_pic"></td>');
+                        if (value.original.employment)
+                            stroka.append('<td>' + "Работает" + '</td>')
+                        else stroka.append('<td>' + "Не работает" + '</td>');
+                        if (value.original.disability)
+                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-disability.svg" height="20"></td>')
+                        else stroka.append('<td class="td_pic"></td>');
+                        if (value.original.business)
+                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-business.svg" height="20"></td>')
+                        else stroka.append('<td class="td_pic"></td>');
+                        stroka.append('<td></td>');
+                        if (value.original.hasLand)
+                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-hasLand.svg" height="20"></td>')
+                        else stroka.append('<td class="td_pic"></td>');
+                        if (value.original.hasProperty)
+                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-hasProperty.svg" height="20"></td>')
+                        else stroka.append('<td class="td_pic"></td>');
+                        stroka.append('<td></td>');
+                        stroka.append('<td>' + value.original.income + '</td>');
+                        stroka.append('<td></td>');
+                        $('#peoples').append(stroka);
+                    });
+                    function Age(b) {
+                        var now = new Date();
+                        var a = now.getFullYear() - b.getFullYear();
+                        var m = now.getMonth() - b.getMonth();
+                        if (m < 0 || (m === 0 && now.getDate() < b.getDate())) {
+                            a--;
+                        }
+                        return a;
+                    }
+                });
             }
-        });
-    }
+        );
 </script>
 </main>
 </body>
