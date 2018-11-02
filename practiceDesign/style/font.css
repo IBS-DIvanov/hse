@@ -1,6 +1,7 @@
 @font-face {
     font-family: OpenSans;
     font-weight: 300;
+    font-style: normal;
     src: url("../../resources/fonts/OpenSansLight.ttf");
     src: url("../../resources/fonts/OpenSansLight.eot?#iefix");
 }
@@ -15,12 +16,15 @@
 
 @font-face {
     font-family: OpenSans;
+    font-weight: normal;
+    font-style: normal;
     src: url("../../resources/fonts/OpenSansRegular.ttf");
     src: url("../../resources/fonts/OpenSansRegular.eot?#iefix");
 }
 
 @font-face {
     font-family: OpenSans;
+    font-weight: normal;
     font-style: italic;
     src: url("../../resources/fonts/OpenSansItalic.ttf");
     src: url("../../resources/fonts/OpenSansItalic.eot?#iefix");
@@ -29,6 +33,7 @@
 @font-face {
     font-family: OpenSans;
     font-weight: 600;
+    font-style: normal;
     src: url("../../resources/fonts/OpenSansSemiBold.ttf");
     src: url("../../resources/fonts/OpenSansSemiBold.eot?#iefix");
 }
@@ -44,6 +49,7 @@
 @font-face {
     font-family: OpenSans;
     font-weight: bold;
+    font-style: normal;
     src: url("../../resources/fonts/OpenSansBold.ttf");
     src: url("../../resources/fonts/OpenSansBold.eot?#iefix");
 }
@@ -59,6 +65,7 @@
 @font-face {
     font-family: OpenSans;
     font-weight: 800;
+    font-style: normal;
     src: url("../../resources/fonts/OpenSansExtraBold.ttf");
     src: url("../../resources/fonts/OpenSansExtraBold.eot?#iefix");
 }
