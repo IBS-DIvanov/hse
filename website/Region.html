@@ -8,7 +8,9 @@
     <link rel="stylesheet" href="./styles/table.css">
     <link rel="stylesheet" href="./styles/utils.css">
     <link rel="stylesheet" href="./styles/filters.css">
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"> </script> -->
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
 </head>
 <body >
     <header>
@@ -141,7 +143,7 @@
         {
             $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json",
                 function( data ) {
-                    $.each(data,
+                    /*$.each(data,
                         function(i, e){
                             var tr = $('<tr></tr>');
 
@@ -162,26 +164,77 @@
                             tr.append(`<td>${e.original.hasProperty?`<img src='../resources/images/icons/person-hasProperty.svg'`:``}</td>`);
                             tr.append(`<td>${e.original.income}</td>`);
 
-                            $('#dataTable tbody').append(tr);
+                            
                         }
-                    );
-
-                    function age_count(date) {
-                        var d = new Date(date).toISOString();
-                        // now
-                        var now = new Date();
-                        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-                        now = now.toISOString().substr(0, 19).replace('T',' ');
-                        // calculate
-                        var age = now.substr(0, 4) - d.substr(0, 4);
-                        if(now.substr(5) < d.substr(5)) --age;
-                        // output
-                        return age;
-                    }
+                    ); */
+                    
+                    $('#tableRowTmpl').tmpl(data).appendTo('#dataTable tbody');
                 }
             );
         }
     );
+
+    function ageCount(date) {
+        var d = new Date(date).toISOString();
+        // now
+        var now = new Date();
+        now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+        now = now.toISOString().substr(0, 19).replace('T',' ');
+        // calculate
+        var age = now.substr(0, 4) - d.substr(0, 4);
+        if(now.substr(5) < d.substr(5)) --age;
+        // output
+        return age+"";
+    }
+</script>
+<script id="tableRowTmpl" type="text/x-jquery-tmpl">
+    <tr>
+        <td>${original.fid}</td>
+        <td>ФОТО</td>
+        <td>${original.number}</td>
+        <td>${original.name}</td>
+        <td>${ageCount(new Date(original.birthday))}</td>
+        <td><img src='../resources/images/icons/person-${original.gender}.svg'></td
+        <td>
+            {{if original.married}}
+                <img src='../resources/images/icons/person-married.svg'>
+            {{/if}}
+        </td>
+        <td>СП</td>
+        <td>
+            {{if original.reservist}}
+                <img src='../resources/images/icons/person-army.svg'>
+            {{/if}}
+        </td>
+        <td>${original.employment?`Работает`:`Не работает`}</td>        
+        <td>
+            {{if original.disability}}
+                <img src='../resources/images/icons/person-disability.svg'>
+            {{/if}}
+        </td>
+        <td>
+            {{if original.business}}
+                <img src='../resources/images/icons/person-business.svg'>
+            {{/if}}
+        </td>
+        <td>Образование</td>
+        <td>
+            {{if original.hasLand}}
+                <img src='../resources/images/icons/person-hasLand.svg'>
+            {{/if}}
+        </td>
+        <td>
+            {{if original.hasProperty}}
+                <img src='../resources/images/icons/person-hasProperty.svg'>
+            {{/if}}
+        </td>
+        <td>
+            {{if original.hasProperty}}
+                <img src='../resources/images/icons/person-car.svg'>
+            {{/if}}
+        </td>
+        <td>${original.income}</td>
+    </tr>
 </script>
 </html>
 
