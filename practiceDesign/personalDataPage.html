@@ -7,41 +7,231 @@
     <link rel="stylesheet" href="style/font.css">
 </head>
 <body>
-    <header class="first-header">
-        <div class = header-left>
+<section>
+    <header class="header-first">
+        <div class=header-left>
             <img src="../resources/images/russia.svg" class="logo"/>
             <span class="logo__title">ФЕДЕРАЛЬНЫЙ РЕСУРС О НАСЕЛЕНИИ</span>
         </div>
-        <div class = header-right>
+        <div class=header-right>
             <span class="account-name">Борисов Сергей Викторович</span>
-            <img src="../resources/images/avatar/avatar-header.svg" class="account-avatar" />
+            <img src="../resources/images/avatar/avatar-header.svg" class="account-avatar"/>
         </div>
     </header>
-    <section>
-        <nav>
-            <nav class="nav__top">
-                <div class="nav__top__home">
-                    <img src="../resources/images/icons/nav-home.svg" class="nav__top__home-image"/>
-                    <span>На главную страницу</span>
-                </div>
-            </nav>
-            <nav class="nav__bottom">
-                <!--<img src="../resources/images/avatar/avatar-header.svg"/> -->
-            </nav>
-        </nav>
-        <main class="main__top">
-            <header class="main-header">
-                <div class="header-left">
-                    <img src="../resources/images/icons/nav-back.svg" class="main__top__back-image"/>
-                    <a class="main__top__back-text" href="regionPage.html">Назад</a>
-                    <span class="main__top__region">СВЕРДЛОВСКАЯ ОБЛ</span>
-                    <span class="main__top__population">4 794 745 чел.</span>
-                </div>
-            </header>
-        </main>
-        <main class="main__bottom">
-        </main>
-    </section>
+    <nav class="nav__top">
+        <div class="nav__top__home">
+            <img src="../resources/images/icons/nav-home.svg" class="nav__top__home-image"/>
+            <span>На главную страницу</span>
+        </div>
+    </nav>
+    <nav class="nav__bottom">
+        <div class="nav__top__home">
+            <img class="nav__photo" src="../resources/images/avatar/man.svg"/>
+        </div>
+        <table class="nav__bottom__table">
+            <tr>
+                <td class="nav__bottom__table__td-chosen">Персональные данные</td>
+            </tr>
+            <tr>
+                <td>Связи</td>
+            </tr>
+            <tr>
+                <td>Занятость</td>
+            </tr>
+            <tr>
+                <td>Имущество</td>
+            </tr>
+            <tr>
+                <td>Доход</td>
+            </tr>
+            <tr>
+                <td>Актовые записи</td>
+            </tr>
+        </table>
+    </nav>
+    <main class="main__top">
+        <header class="main-header">
+            <div class="header-left">
+                <img src="../resources/images/icons/nav-back.svg" class="main__top__back-image"/>
+                <a class="main__top__back-text" href="personalDataPage.html">Назад</a>
+                <span class="main__top__social-number">Социальный <br/>номер</span>
+                <span class="main__top__number">1001-6019-9038</span>
+            </div>
+        </header>
+    </main>
+    <main class="main__bottom__name">
+        <table class="main__name__table">
+            <tr>
+                <th>Фамилия Имя Отчество</th>
+                <th>Гражданство</th>
+                <th>Пол</th>
+            </tr>
+            <tr>
+                <td>Ковалев Сергей Иванович</td>
+                <td><img class="main__name__image" src="../resources/images/icons/flag-russia.png"/> Российская
+                    Федерация
+                </td>
+                <td><img class="main__name__image" src="../resources/images/icons/person-man.svg"/></td>
+            </tr>
+        </table>
+    </main>
+    <main class="main__bottom__section">
+        <div>Персональные данные</div>
+    </main>
+    <main class="main__bottom__data">
+        <div>
+            <table>
+                <caption>Паспорт</caption>
+                <tr>
+                    <th>Серия</th>
+                    <th>Номер</th>
+                    <th>Кем выдан</th>
+                </tr>
+                <tr>
+                    <td>64 86</td>
+                    <td>957083</td>
+                    <td>ОТДЕЛЕНИЕ УФМС РОССИИ ПО ЗАБАЙКАЛЬСКОМУ КРАЮ В МОГОЧИНСКОМ Р-НЕ</td>
+                </tr>
+            </table>
+            <table>
+                <caption class="main__data__table_smaller-caption">Дата выдачи</caption>
+                <tr>
+                    <th>Число</th>
+                    <th>Месяц</th>
+                    <th>Год</th>
+                    <th>Код подразделения</th>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>09</td>
+                    <td>1981</td>
+                    <td>950-325</td>
+                </tr>
+            </table>
+            <hr/>
+        </div>
+        <div>
+            <table>
+                <caption>Адрес регистрации</caption>
+                <tr>
+                    <th>Регион</th>
+                    <th>Населенный пункт</th>
+                    <th>Улица</th>
+                    <th>Дом</th>
+                    <th>Квартира</th>
+                </tr>
+                <tr>
+                    <td>Свердловская Обл</td>
+                    <td>Краснотурьинск</td>
+                    <td>Рюмина</td>
+                    <td>17</td>
+                    <td>63</td>
+                </tr>
+            </table>
+            <hr/>
+        </div>
+        <div>
+            <table style="float:left">
+                <caption>ИНН</caption>
+                <tr>
+                    <th>Номер</th>
+                </tr>
+                <tr>
+                    <td>855742659923</td>
+                </tr>
+            </table>
+            <table style="float:left">
+                <caption>СНИЛС</caption>
+                <tr>
+                    <th>Номер</th>
+                </tr>
+                <tr>
+                    <td>547-270-853 60</td>
+                </tr>
+            </table>
+            <table style="float:left">
+                <caption>Полис ОМС</caption>
+                <tr>
+                    <th>Номер</th>
+                </tr>
+                <tr>
+                    <td>2811115356799710</td>
+                </tr>
+            </table>
+            <table style="float:left">
+                <caption>Военный билет</caption>
+                <tr>
+                    <th>Номер</th>
+                </tr>
+                <tr>
+                    <td>СС 6283035</td>
+                </tr>
+            </table>
+            <table>
+                <caption>Водительские права</caption>
+                <tr>
+                    <th>Номер</th>
+                </tr>
+                <tr>
+                    <td>14 30 093566</td>
+                </tr>
+            </table>
+            <hr/>
+        </div>
+        <div>
+            <table>
+                <caption>Дата и место рождения</caption>
+                <tr>
+                    <th>Число</th>
+                    <th>Месяц</th>
+                    <th>Год</th>
+                    <th>Населенный пункт</th>
+                    <th>Страна</th>
+                </tr>
+                <tr>
+                    <td>21</td>
+                    <td>09</td>
+                    <td>1965</td>
+                    <td>Краснотурьинск</td>
+                    <td>РОССИЯ</td>
+                </tr>
+            </table>
+            <hr/>
+        </div>
+        <div>
+            <table>
+                <caption>Дата прибытия в РФ</caption>
+                <tr>
+                    <th>Число</th>
+                    <th>Месяц</th>
+                    <th>Год</th>
+                </tr>
+                <tr>
+                    <td colspan="3">По месту рождения</td>
+                </tr>
+            </table>
+            <hr/>
+        </div>
+        <div>
+            <table>
+                <caption>Контакты</caption>
+                <tr>
+                    <th>Мобильный телефон</th>
+                    <th>Домашний телефон</th>
+                    <th>Рабочий телефон</th>
+                    <th>Электронная почта</th>
+                </tr>
+                <tr>
+                    <td>8 (927) 441-78-83</td>
+                    <td>8 (972) 484-41-76</td>
+                    <td>8 (991) 930-47-29</td>
+                    <td><a href="mailto:vnk2000@mail.ru">vnk2000@mail.ru</a></td>
+                </tr>
+            </table>
+            <hr/>
+        </div>
+    </main>
+</section>
 </body>
 </html>
 <!--
