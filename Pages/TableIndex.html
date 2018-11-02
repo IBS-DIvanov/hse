@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>My title</title>
+    <link rel="stylesheet" href="fonts.css">
+    <link rel="stylesheet" href="styles.css">
+
+    <script type="text/javascript" src=" https://code.jquery.com/jquery-3.3.1.js"></script>
+</head>
+<body>
+<header>
+    <div class="left">
+        <img class="logo_img_arm" src="../resources/images/russia.svg">
+        <span class="upperCase">Федеральный ресурс о населении</span>
+    </div>
+    <div class="right">
+        <span>Борисов Сергей Викторович</span>
+        <img class="AvatarHeader" src="../resources/images/avatar/avatar-header.svg">
+    </div>
+</header>
+<nav>
+    <div class="header">
+        <span>Фильтры</span></div>
+    <div class="main scrolled">
+        <p>ФИО</p>
+        <select>
+            <option>Все</option>
+        </select>
+        <p>Социальный номер</p>
+        <select>
+            <option>Все</option>
+        </select>
+
+        <hr>
+        <p>Округ</p>
+        <select>
+            <option>Центральный федеральный текст для того чтобы не вошло</option>
+        </select>
+        <p>Субъект</p>
+        <select>
+            <option>Адыгея</option>
+        </select>
+
+        <hr>
+
+        <p>Гражданство</p>
+        <select>
+            <option>Российская федерация</option>
+        </select>
+        <p>Возраст</p>
+        <select>
+            <option>Не выбрано</option>
+        </select>
+        <p>Пол</p>
+        <div> Мужской<input type="radio" value="">
+            Женский <input type="radio" value=""></div>
+
+        <p>Семейное положение</p>
+
+        <div> В браке<input type="radio" value="">
+            Не в браке <input type="radio" value=""></div>
+
+        <hr>
+        <p>Занятость</p>
+        <select>
+            <option>Работает</option>
+        </select>
+        <p>Образование</p>
+        <select>
+            <option>Дошкольное</option>
+        </select>
+    </div>
+
+</nav>
+<main>
+    <div class="header">
+        <div class="left">
+            <img class="back" src="../resources/images/icons/nav-back.svg">
+            <span class="back">Назад</span>
+            <span class="region"> СВЕРДЛОВСКАЯ ОБЛАСТЬ</span>
+            <span>4 794 745 чел.</span>
+        </div>
+    </div>
+    <div class="Main_Table">
+        <table>
+            <tr>
+                <th> №</th>
+                <th> Фото</th>
+                <th> Социальный номер</th>
+                <th> Фамилия Имя Отчество</th>
+                <th>Возраст</th>
+                <th>Пол</th>
+                <th>Семейное положение</th>
+                <th>Военно-обязанность</th>
+                <th>Занятость</th>
+                <th>Инвалидность</th>
+                <th>Предприниматель</th>
+                <th>Образование</th>
+                <th>Земля</th>
+                <th>Недвижимость</th>
+                <th>Автомобиль</th>
+                <th>Доход</th>
+                <th><img src="../resources/images/icons/nav-place.svg"></th>
+
+            </tr>
+            <tr>
+                <td>1</td>
+                <td><img src="../resources/images/avatar/man.svg"></td>
+                <td> 0000-0000-0000</td>
+                <td> Ковалев Сергей Генадьевич</td>
+                <td> 52</td>
+                <td><img src="../resources/images/icons/person-man.svg"></td>
+                <td><img src="../resources/images/icons/person-married.svg"></td>
+                <td><img src="../resources/images/icons/person-army.svg"></td>
+                <td> Работает</td>
+                <td><img src="../resources/images/icons/person-disability.svg"></td>
+                <td><img src="../resources/images/icons/person-business.svg"></td>
+                <td> Среднее</td>
+                <td><img src="../resources/images/icons/person-hasLand.svg"></td>
+                <td><img src="../resources/images/icons/person-hasProperty.svg"></td>
+                <td><img src="../resources/images/icons/person-car.svg"></td>
+                <td>5000</td>
+                <td></td>
+            </tr>
+
+
+        </table>
+    </div>
+
+</main>
+</body>
+</html>
+<script>
+$('#main_scrolled').bind('mousewheel DOMMouseScroll', function(e) {
+    var scrollTo = null;
+    if (e.type == 'mousewheel') {
+        scrollTo = (e.originalEvent.wheelDelta * -1);
+    }
+    else if (e.type == 'DOMMouseScroll') {
+        scrollTo = 40 * e.originalEvent.detail;
+    }
+    if (scrollTo) {
+        e.preventDefault();
+        $(this).scrollTop(scrollTo + $(this).scrollTop());
+    }
+});
+
+
+
+
+
+
+</script>
+<script>
+    $.preventScrolling = function(selector) {
+
+  $.each($(selector), function(index, element) {
+
+    var element    = $(element),
+        scrollDiff = element[0].scrollHeight - element.outerHeight(),
+        wheelDelta = null,
+        scrollTop  = null;
+
+        element.on('mousewheel DOMMouseScroll', function(event) {
+
+          /**
+           * направление колёсика мыши (-1 вниз, 1 вверх)
+           *
+           * нормализация определения направления прокрутки
+           * (firefox < 0 || chrome etc... > 0)
+           * (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0)
+           */
+          wheelDelta = (event.originalEvent.detail < 0 || event.originalEvent.wheelDelta > 0) ? 1 : -1;
+          scrollTop  = element[0].scrollTop; // позиция скролла
+
+          if ((scrollTop >= scrollDiff && wheelDelta < 0) || (scrollTop <= 0 && wheelDelta > 0)) {
+            event.stopPropagation();
+            event.preventDefault();
+          }
+        });
+
+    });
+
+};
+
+$.preventScrolling('.scroller-block');
+
+</script>

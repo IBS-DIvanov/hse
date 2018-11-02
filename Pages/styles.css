@@ -30,7 +30,8 @@ header {
      grid-template-columns: 1fr auto;  color: #4B7CB3!important;
  }
 .main_scrolled {
-background: white!important;}
+background: white!important;
+overflow: auto!important}
 header .left,
 main .left{
     grid-column: 1;
