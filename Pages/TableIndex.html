@@ -7,7 +7,30 @@
     <link rel="stylesheet" href="styles.css">
 
     <script type="text/javascript" src=" https://code.jquery.com/jquery-3.3.1.js"></script>
+
+    <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
+
+    <!--Подгрузка всех строк таблицы-->
+    <script id="update_table">
+            $.getJSON( "https://github.com/IBS-DIvanov/hse/blob/develop/resources/json/temp_short.json",(function addRows(dataItems){
+				<!--dataItems = {id: "qwerty"};-->
+              <!--$('#table_items_tmpl').tmpl(dataItems).appendTo('#info');-->
+              alert(dataItems);
+            }));
+    </script>
+
+    <!--Шаблон строки таблицы-->
+    <script id="table_items_tmpl" type="text/x-jquery-tmpl">
+        <!--Для каждой строки в dataItems - отдельная строка в таблице-->
+        {{each dataItems}}
+            <tr>
+                <td>${id}</td>
+            </tr>
+        {{/each}}
+    </script>
 </head>
+
 <body>
 <header>
     <div class="left">
@@ -105,32 +128,37 @@
 
             </tr>
             <tr>
-                <td>1</td>
-                <td><img src="../resources/images/avatar/man.svg"></td>
-                <td> 0000-0000-0000</td>
-                <td> Ковалев Сергей Генадьевич</td>
-                <td> 52</td>
-                <td><img src="../resources/images/icons/person-man.svg"></td>
-                <td><img src="../resources/images/icons/person-married.svg"></td>
-                <td><img src="../resources/images/icons/person-army.svg"></td>
-                <td> Работает</td>
-                <td><img src="../resources/images/icons/person-disability.svg"></td>
-                <td><img src="../resources/images/icons/person-business.svg"></td>
-                <td> Среднее</td>
-                <td><img src="../resources/images/icons/person-hasLand.svg"></td>
-                <td><img src="../resources/images/icons/person-hasProperty.svg"></td>
-                <td><img src="../resources/images/icons/person-car.svg"></td>
-                <td>5000</td>
-                <td></td>
+                <!--<td>1</td>-->
+                <!--<td><img src="../resources/images/avatar/man.svg"></td>-->
+                <!--<td> 0000-0000-0000</td>-->
+                <!--<td> Ковалев Сергей Генадьевич</td>-->
+                <!--<td> 52</td>-->
+                <!--<td><img src="../resources/images/icons/person-man.svg"></td>-->
+                <!--<td><img src="../resources/images/icons/person-married.svg"></td>-->
+                <!--<td><img src="../resources/images/icons/person-army.svg"></td>-->
+                <!--<td> Работает</td>-->
+                <!--<td><img src="../resources/images/icons/person-disability.svg"></td>-->
+                <!--<td><img src="../resources/images/icons/person-business.svg"></td>-->
+                <!--<td> Среднее</td>-->
+                <!--<td><img src="../resources/images/icons/person-hasLand.svg"></td>-->
+                <!--<td><img src="../resources/images/icons/person-hasProperty.svg"></td>-->
+                <!--<td><img src="../resources/images/icons/person-car.svg"></td>-->
+                <!--<td>5000</td>-->
+                <!--<td></td>-->
             </tr>
 
+            <tbody id = "info">
+            <!--Сюда будут добавляться строки-->
+            </tbody>
 
         </table>
     </div>
 
 </main>
+
 </body>
 </html>
+
 <script>
 $('#main_scrolled').bind('mousewheel DOMMouseScroll', function(e) {
     var scrollTo = null;
@@ -145,13 +173,8 @@ $('#main_scrolled').bind('mousewheel DOMMouseScroll', function(e) {
         $(this).scrollTop(scrollTo + $(this).scrollTop());
     }
 });
-
-
-
-
-
-
 </script>
+
 <script>
     $.preventScrolling = function(selector) {
 
