@@ -5,196 +5,236 @@
     <title>Область</title>
     <link rel="stylesheet" href="./fonts.css">
     <link rel="stylesheet" href="./Style.css">
-    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>-->
     <script src="http://code.jquery.com/jquery-latest.min.js"></script>
     <script src="http://ajax.aspnetcdn.com/ajax/jquery.templates/beta1/jquery.tmpl.js"></script>
 </head>
 <body>
-<header>
-    <div class="header__logo">
-        <img class="Russia" src="../resources/images/russia.svg">
-        <span class="MainName">ФЕДЕРАЛЬНЫЙ РЕСУРС О НАСЕЛЕНИИ</span>
-    </div>
-    <div class="header__login">
-        <span class="Name">Борисов Сергей Викторович </span>
-        <img class="AvatarHeader" src="../resources/images/avatar/avatar-header.svg">
-    </div>
-</header>
-<nav>
-    <div class="nav_header">Фильтры</div>
-    <div class="nav_menu">
-        <div class="nav_menu_block">
-            <div>ФИО</div>
-            <select>
-                <option>Все</option>
-            </select>
-            <p></p>
-            <div>Социальный номер</div>
-            <select>
-                <option>Все</option>
-            </select>
+    <header>
+        <div class="header__logo">
+            <img class="Russia" src="../resources/images/russia.svg">
+            <span class="MainName">ФЕДЕРАЛЬНЫЙ РЕСУРС О НАСЕЛЕНИИ</span>
         </div>
-        <div class="nav_menu_block">
-            <div>Округ</div>
-            <select>
-                <option>Центральный федеральный округ</option>
-            </select>
-            <p></p>
-            <div>Субъект</div>
-            <select>
-                <option>Адыгея</option>
-            </select>
+        <div class="header__login">
+            <span class="Name">Борисов Сергей Викторович </span>
+            <img class="AvatarHeader" src="../resources/images/avatar/avatar-header.svg">
         </div>
-        <div class="nav_menu_block">
-            <div>Гражданство</div>
-            <select>
-                <option>Российская Федерация</option>
-            </select>
-            <p></p>
-            <div>Возраст</div>
-            <select>
-                <option>Не выбрано</option>
-            </select>
-            <p></p>
-            <div>Пол</div>
-            <table class="menu_radio">
-                <tr>
-                    <td>Мужской<input type="radio" style="vertical-align: bottom;"></td>
-                    <td>Женский<input type="radio" style="vertical-align: bottom;"></td>
-                </tr>
-            </table>
-            <p></p>
-            <div>Семейное положение</div>
-            <table class="menu_radio">
-                <tr>
-                    <td>В браке<input type="radio" style="vertical-align: bottom;"></td>
-                    <td>Не в браке<input type="radio" style="vertical-align: bottom;"></td>
-                </tr>
-            </table>
-            <p></p>
-            <div>Инвалидность</div>
-            <table class="menu_radio">
-                <tr>
-                    <td><span >Есть</span><input type="radio" style="vertical-align: bottom;"></td>
-                    <td><span >Нет</span><input type="radio" style="vertical-align: bottom;"></td>
-                </tr>
-            </table>
-        </div>
-        <div class="nav_menu_block">
-            <div>Занятость</div>
-            <select>
-                <option>Работает</option>
-            </select>
-            <p></p>
-            <div>Образование</div>
-            <select>
-                <option>Дошкольник</option>
-            </select>
-            <p></p>
-            <div>Доходы</div>
-            <select>
-                <option></option>
-            </select>
-        </div>
+    </header>
+    <nav>
+        <div class="nav_header">Фильтры</div>
+        <div class="nav_menu">
+            <div class="nav_menu_block">
+                <div>ФИО</div>
+                <select>
+                    <option>Все</option>
+                </select>
+                <p></p>
+                <div>Социальный номер</div>
+                <select>
+                    <option>Все</option>
+                </select>
+            </div>
+            <div class="nav_menu_block">
+                <div>Округ</div>
+                <select>
+                    <option>Центральный федеральный округ</option>
+                </select>
+                <p></p>
+                <div>Субъект</div>
+                <select>
+                    <option>Адыгея</option>
+                </select>
+            </div>
+            <div class="nav_menu_block">
+                <div>Гражданство</div>
+                <select>
+                    <option>Российская Федерация</option>
+                </select>
+                <p></p>
+                <div>Возраст</div>
+                <select>
+                    <option>Не выбрано</option>
+                </select>
+                <p></p>
+                <div>Пол</div>
+                <table class="menu_radio">
+                    <tr>
+                        <td>Мужской<input type="radio" style="vertical-align: bottom;"></td>
+                        <td>Женский<input type="radio" style="vertical-align: bottom;"></td>
+                    </tr>
+                </table>
+                <p></p>
+                <div>Семейное положение</div>
+                <table class="menu_radio">
+                    <tr>
+                        <td>В браке<input type="radio" style="vertical-align: bottom;"></td>
+                        <td>Не в браке<input type="radio" style="vertical-align: bottom;"></td>
+                    </tr>
+                </table>
+                <p></p>
+                <div>Инвалидность</div>
+                <table class="menu_radio">
+                    <tr>
+                        <td><span>Есть</span><input type="radio" style="vertical-align: bottom;"></td>
+                        <td><span>Нет</span><input type="radio" style="vertical-align: bottom;"></td>
+                    </tr>
+                </table>
+            </div>
+            <div class="nav_menu_block">
+                <div>Занятость</div>
+                <select>
+                    <option>Работает</option>
+                </select>
+                <p></p>
+                <div>Образование</div>
+                <select>
+                    <option>Дошкольник</option>
+                </select>
+                <p></p>
+                <div>Доходы</div>
+                <select>
+                    <option></option>
+                </select>
+            </div>
 
-    </div>
-</nav>
-<main>
-    <div class="main_name">
-        <a class="Back" href="Region.html">
-            <img class="nav-back" src="../resources/images/icons/nav-back.svg" height="20">
-            <span class="Back_Text">Назад</span>
-        </a>
-        <span class="Region">СВЕРДЛОВСКАЯ ОБЛ</span>
-        <span class="population">4 794 745 чел.</span>
-    </div>
-    <div class="main_data">
-        <span class="date">27.09.2017</span>
-        <img class="callendar" src="../resources/images/icons/nav-date.svg" height="20">
-    </div>
-    <table class="main_table", id="peoples">
-        <tr>
-            <th>№</th>
-            <th>Фото</th>
-            <th>Социальный номер</th>
-            <th nowrap>Фамилия Имя Отчество</th>
-            <th>Возраст</th>
-            <th>Пол</th>
-            <th>Семейное положение</th>
-            <th>Военно-
-                обязанность</th>
-            <th>Занятость</th>
-            <th>Инвалид-
-                ность</th>
-            <th>Предпри-
-                ниматель</th>
-            <th>Образование</th>
-            <th>Земля</th>
-            <th>Недви-
-                жимость</th>
-            <th>Автомо-
-                биль</th>
-            <th>Доход</th>
-            <th style="text-align: center;"><img src="../resources/images/icons/nav-place.svg" height="20" ></th>
-        </tr>
-    </table>
-    <script type="text/javascript">
-        $().ready(
-            function () {
-                $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json", function (data) {
-                    var i = 1;
-                    $.each(data, function (key, value) {
-                        var stroka = $('<tr></tr>');
-                        stroka.append('<td class="td_pic">' + (i++) + '</td>');
-                        if (value.original.gender == "woman")
-                            stroka.append('<td class="td_pic"><img src="../resources/images/avatar/woman.svg" height="30"></td>')
-                        else stroka.append('<td class="td_pic"><img src="../resources/images/avatar/avatar-header.svg" height="30"></td>');
-                        stroka.append('<td>' + value.original.number + '</td>');
-                        stroka.append('<td>' + value.original.name + '</td>');
-                        stroka.append('<td>' + Age(new Date(value.original.birthday)) + '</td>');
-                        if (value.original.gender == "woman")
-                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-woman.svg" height="20"></td>')
-                        else stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-man.svg" height="20"></td>');
-                        if (value.original.married)
-                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-married.svg" height="20"></td>')
-                        else stroka.append('<td class="td_pic"></td>');
-                        if (value.original.reservist)
-                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-army.svg" height="20"></td>')
-                        else stroka.append('<td class="td_pic"></td>');
-                        if (value.original.employment)
-                            stroka.append('<td>' + "Работает" + '</td>')
-                        else stroka.append('<td>' + "Не работает" + '</td>');
-                        if (value.original.disability)
-                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-disability.svg" height="20"></td>')
-                        else stroka.append('<td class="td_pic"></td>');
-                        if (value.original.business)
-                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-business.svg" height="20"></td>')
-                        else stroka.append('<td class="td_pic"></td>');
-                        stroka.append('<td></td>');
-                        if (value.original.hasLand)
-                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-hasLand.svg" height="20"></td>')
-                        else stroka.append('<td class="td_pic"></td>');
-                        if (value.original.hasProperty)
-                            stroka.append('<td class="td_pic"><img src="../resources/images/icons/person-hasProperty.svg" height="20"></td>')
-                        else stroka.append('<td class="td_pic"></td>');
-                        stroka.append('<td></td>');
-                        stroka.append('<td>' + value.original.income + '</td>');
-                        stroka.append('<td></td>');
-                        $('#peoples').append(stroka);
-                    });
-                    function Age(b) {
-                        var now = new Date();
-                        var a = now.getFullYear() - b.getFullYear();
-                        var m = now.getMonth() - b.getMonth();
-                        if (m < 0 || (m === 0 && now.getDate() < b.getDate())) {
-                            a--;
-                        }
-                        return a;
-                    }
-                });
-            }
-        );
-</script>
-</main>
+        </div>
+    </nav>
+    <main>
+        <div class="main_name">
+            <a class="Back" href="Region.html">
+                <img class="nav-back" src="../resources/images/icons/nav-back.svg" height="20">
+                <span class="Back_Text">Назад</span>
+            </a>
+            <span class="Region">СВЕРДЛОВСКАЯ ОБЛ</span>
+            <span class="population">4 794 745 чел.</span>
+        </div>
+        <div class="main_data">
+            <span class="date">27.09.2017</span>
+            <img class="callendar" src="../resources/images/icons/nav-date.svg" height="20">
+        </div>
+        <table class="main_table" , id="peoples">
+            <tr>
+                <th>№</th>
+                <th>Фото</th>
+                <th>Социальный номер</th>
+                <th nowrap>Фамилия Имя Отчество</th>
+                <th>Возраст</th>
+                <th>Пол</th>
+                <th>Семейное положение</th>
+                <th>
+                    Военно-
+                    обязанность
+                </th>
+                <th>Занятость</th>
+                <th>
+                    Инвалид-
+                    ность
+                </th>
+                <th>
+                    Предпри-
+                    ниматель
+                </th>
+                <th>Образование</th>
+                <th>Земля</th>
+                <th>
+                    Недви-
+                    жимость
+                </th>
+                <th>
+                    Автомо-
+                    биль
+                </th>
+                <th>Доход</th>
+                <th style="text-align: center;"><img src="../resources/images/icons/nav-place.svg" height="20"></th>
+            </tr>
+        </table>
+    </main>
 </body>
+<script type="text/javascript">
+    $().ready(
+        function () {
+            $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json", function (data) {
+                $('#PersonStringInTable').tmpl(data).appendTo('#peoples');
+            });
+        }
+    );
+    
+    function Age(b) {
+        var now = new Date();
+        var a = now.getFullYear() - b.getFullYear();
+        var m = now.getMonth() - b.getMonth();
+        if (m < 0 || (m === 0 && now.getDate() < b.getDate())) {
+            a--;
+        }
+        return a;
+    }
+    var i = 0;
+    function num() {
+        i++;
+        return i;
+    }
+</script>
+<script id="PersonStringInTable" type="text/x-jquery-tmpl">
+    <tr>
+        <td class="td_pic">${num()}</td>
+        <td class="td_pic">
+            {{if (original.gender == 'woman')}}
+            <img src="../resources/images/avatar/woman.svg" height="30">
+            {{else}}
+            <img src="../resources/images/avatar/man.svg" height="30">
+            {{/if}}
+        </td>
+        <td>${original.number}</td>
+        <td>${original.name}</td>
+        <td>${Age(new Date(original.birthday))}</td>
+        <td class="td_pic">
+            {{if (original.gender == 'woman')}}
+            <img src="../resources/images/icons/person-woman.svg" height="20">
+            {{else}}
+            <img src="../resources/images/icons/person-man.svg" height="20">
+            {{/if}}
+        </td>
+        <td class="td_pic">
+            {{if (original.married)}}
+            <img src="../resources/images/icons/person-married.svg" height="20">
+            {{/if}}
+        </td>
+        <td class="td_pic">
+            {{if (original.reservist)}}
+            <img src="../resources/images/icons/person-army.svg" height="20">
+            {{/if}}
+        </td>
+        <td>
+            {{if (original.employment)}}
+            Работает
+            {{else}}
+            Не работает
+            {{/if}}
+        </td>
+        <td class="td_pic">
+            {{if (original.disability)}}
+            <img src="../resources/images/icons/person-disability.svg" height="20">
+            {{/if}}
+        </td>
+        <td class="td_pic">
+            {{if (original.business)}}
+            <img src="../resources/images/icons/person-business.svg" height="20">
+            {{/if}}
+        </td>
+        <td></td>
+        <td class="td_pic">
+            {{if (original.hasLand)}}
+            <img src="../resources/images/icons/person-hasLand.svg" height="20">
+            {{/if}}
+        </td>
+        <td class="td_pic">
+            {{if (original.hasProperty)}}
+            <img src="../resources/images/icons/person-hasProperty.svg" height="20">
+            {{/if}}
+        </td>
+        <td></td>
+        <td>${original.income}</td>
+        <td></td>
+    </tr>
+</script>
 </html>
