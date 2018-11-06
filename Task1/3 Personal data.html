@@ -20,17 +20,27 @@
 <nav>
     <div>Фильтры</div>
 </nav>
-<main>
-    <div class="main_name">
-        <a href="PersonalData.html">
-            <img class="nav-back" src="../resources/images/icons/nav-back.svg" height="20">
-            <span>Назад</span>
-        </a>
-        <span>Серийный номер 1000-4956-9082</span>
-    </div>
 
-    <table>
+
+<main2>
+    <table class="BarWithNumber">
         <tr>
+            <th width = "20px">
+                <a class="Back" href="PersonalData.html">
+                    <img class="nav-back" src="../resources/images/icons/nav-back.svg" height="20">
+                    <span class="Back_Text">Назад</span>
+                </a>
+            </th>
+            <th class="SocNumberTitle">
+                Социальный номер
+            </th>
+            <th class="SocNumber">
+                1000-4956-9082
+            </th>
+        </tr>
+    </table>
+    <table class = "FIO">
+        <tr class = titleFIO>
             <th>
                 Фамилия Имя Отчество
             </th>
@@ -46,73 +56,215 @@
                 Бобровская Нюргуяна Николаевна
             </td>
             <td>
-                Российская Федерация
+                <img class="nav-back" src="../resources/images/icons/flag-russia.png" height="10">
+                <span>Российская Федерация</span>
             </td>
             <td class="td-img">
-                <img src="../resources/images/icons/person-women.svg">
+                <img src="../resources/images/icons/person-woman.svg" height="20">
             </td>
         </tr>
     </table>
-
 
     <div class = titleData>
         <a>Персональные данные</a>
     </div>
-    <table>
-        <tr>
-            <th>
-                Серия
-            </th>
-            <th>
-                Номер
-            </th>
-            <th>
-                Кем выдвн
-            </th>
-        </tr>
-        <tr>
-            <td>
-                20 50
-            </td>
-            <td>
-                377560
-            </td>
-            <td>
-                отделом УФМС России
-            </td>
-        </tr>
-    </table>
 
-    <table>
-        <tr>
-            <th>
-                Число
-            </th>
-            <th>
-                Месяц
-            </th>
-            <th>
-                Год
-            </th>
-            <th>
-                Код подразделения
-            </th>
-        </tr>
-        <tr>
-            <td>
-                27
-            </td>
-            <td>
-                07
-            </td>
-            <td>
-                2008
-            </td>
-            <td>
-                490-277
-            </td>
-        </tr>
-    </table>
-</main>
+    <details class="Pas1">
+        <summary class="titleRaz">Паспорт</summary>
+        <table class="TabData">
+            <tr class="titleCol">
+                <th>
+                    Серия
+                </th>
+                <th>
+                    Номер
+                </th>
+                <th>
+                    Кем выдан
+                </th>
+            </tr>
+            <tr class="DataTab">
+                <td>
+                    20 50
+                </td>
+                <td>
+                    377560
+                </td>
+                <td>
+                    отделом УФМС России
+                </td>
+            </tr>
+        </table>
+            <span class="titleRaz2"> Дата выдачи </span>
+
+            <table class="TabData">
+            <tr class="titleCol">
+                <th>
+                    Число
+                </th>
+                <th>
+                    Месяц
+                </th>
+                <th>
+                    Год
+                </th>
+                <th>
+                    Код подразделения
+                </th>
+            </tr>
+            <tr class="DataTab">
+                <td>
+                    27
+                </td>
+                <td>
+                    07
+                </td>
+                <td>
+                    2008
+                </td>
+                <td>
+                    490-277
+                </td>
+            </tr>
+        </table>
+    </details>
+    <details class="Pas1">
+        <summary class="titleRaz">Адрес регистрации</summary>
+        <table class="TabData">
+            <tr class="titleCol">
+                <th>
+                    Регион
+                </th>
+                <th>
+                    Населенный пункт
+                </th>
+                <th>
+                    Улица
+                </th>
+                <th>
+                    Дом
+                </th>
+                <th>
+                    Квартира
+                </th>
+            </tr>
+            <tr class="DataTab">
+                <td>
+                    Свердловская обл
+                </td>
+                <td>
+                    Краснотурьинск
+                </td>
+                <td>
+                    Рюмина
+                </td>
+                <td>
+                    17
+                </td>
+                <td>
+                    63
+                </td>
+            </tr>
+        </table>
+
+    </details>
+
+    <details class="Pas1">
+        <summary class="titleRaz">Дата и место рождения</summary>
+        <table class="TabData">
+            <tr class="titleCol">
+                <th>
+                    Число
+                </th>
+                <th>
+                    Месяц
+                </th>
+                <th>
+                    Год
+                </th>
+                <th>
+                    Населенный пункт
+                </th>
+                <th>
+                    Страна
+                </th>
+            </tr>
+            <tr class="DataTab">
+                <td>
+                    21
+                </td>
+                <td>
+                    09
+                </td>
+                <td>
+                    1965
+                </td>
+                <td>
+                    Краснотурьинск
+                </td>
+                <td>
+                    РОССИЯ
+                </td>
+            </tr>
+        </table>
+
+    </details>
+    <details class="Pas1">
+        <summary class="titleRaz">Дата прибытия в РФ</summary>
+        <table class="TabData">
+            <tr class="titleCol">
+                <th>
+                    Число
+                </th>
+                <th>
+                    Месяц
+                </th>
+                <th>
+                    Год
+                </th>
+            </tr>
+        </table>
+            <span class="DataTab" padding = "10px 10px 10px 20px !important";>
+                По месту рождения
+            </span>
+
+
+    </details>
+    <details class="Pas1">
+        <summary class="titleRaz">Контакты</summary>
+        <table class="TabData">
+            <tr class="titleCol">
+                <th>
+                    Мобильный телефон
+                </th>
+                <th>
+                   Домашний телефон
+                </th>
+                <th>
+                    Рабочий телефон
+                </th>
+                <th>
+                    Электронная почта
+                </th>
+            </tr>
+            <tr class="DataTab">
+                <td>
+                    8(927)441-78-83
+                </td>
+                <td>
+                    8(972)484-41-76
+                </td>
+                <td>
+                    8(991)930-47-29
+                </td>
+                <td>
+                    vnk2000@mail.ru
+                </td>
+            </tr>
+        </table>
+
+    </details>
+
+</main2>
 </body>
 </html>

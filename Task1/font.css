@@ -1,4 +1,40 @@
 @font-face{
-font-family: OpenSansRegular;
-src: url(../resources/fonts/OpenSansRegular.ttf);
+    font-family: OpenSansRegular;
+    src: url(../resources/fonts/OpenSansRegular.ttf);
+}
+@font-face{
+    font-family: OpenSansBold;
+    src: url(../resources/fonts/OpenSansBold.ttf);
+}
+@font-face{
+    font-family: OpenSansBoldItalic;
+    src: url(../resources/fonts/OpenSansBoldItalic.ttf);
+}
+@font-face{
+    font-family: OpenSansExtraBold;
+    src: url(../resources/fonts/OpenSansExtraBold.ttf);
+}
+@font-face{
+    font-family: OpenSansExtraBoldItalic;
+    src: url(../resources/fonts/OpenSansExtraBoldItalic.ttf);
+}
+@font-face{
+    font-family: OpenSansItalic;
+    src: url(../resources/fonts/OpenSansItalic.ttf);
+}
+@font-face{
+    font-family: OpenSansLight;
+    src: url(../resources/fonts/OpenSansLight.ttf);
+}
+@font-face{
+    font-family: OpenSansLightItalic;
+    src: url(../resources/fonts/OpenSansLightItalic.ttf);
+}
+@font-face{
+    font-family: OpenSansSemiBold;
+    src: url(../resources/fonts/OpenSansSemiBold.ttf);
+}
+@font-face{
+    font-family: OpenSansSemiBoldItalic;
+    src: url(../resources/fonts/OpenSansSemiBoldItalic.ttf);
 }
