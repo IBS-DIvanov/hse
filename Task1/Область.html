@@ -151,14 +151,6 @@
     </main>
 </body>
 <script type="text/javascript">
-    $().ready(
-        function () {
-            $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json", function (data) {
-                $('#PersonStringInTable').tmpl(data).appendTo('#peoples');
-            });
-        }
-    );
-    
     function Age(b) {
         var now = new Date();
         var a = now.getFullYear() - b.getFullYear();
@@ -236,5 +228,14 @@
         <td>${original.income}</td>
         <td></td>
     </tr>
+</script>
+<script type="text/javascript">
+    $().ready(
+        function () {
+            $.getJSON("https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json", function (data) {
+                $('#PersonStringInTable').tmpl(data).appendTo('#peoples');
+            });
+        }
+    );
 </script>
 </html>
