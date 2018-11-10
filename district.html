@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Область</title>
+    <link rel="stylesheet" href="styles/grid-layout-style.css">
+    <link rel="stylesheet" href="styles/fonts.css">
+</head>
+<body>
+    <div class="grid-container">
+        <header class="site-header">
+            <div class="site-logo">
+                <h1>ФЕДЕРАЛЬНЫЙ РЕСУРС О НАСЕЛЕНИИ</h1>
+            </div>
+            <div class="top-profile">
+                <div class="top-profile-name">Борисов Сергей Викторович</div>
+                <img class="top-profile-img" src="resources\images\avatar\avatar-header.svg">
+            </div>
+        </header>
+        <div class="sidebar filters-sidebar">
+            <div class="sidebar-header filters-header">
+                <h2>Фильтры</h2>
+            </div>
+            <div class="filters-bottom">
+                <form action="" method="get">
+                    <p>ФИО</p>
+                    <select>
+                        <option>Все</option>
+                    </select><br>
+                    <p>Социальный номер</p>
+                    <select>
+                        <option>Все</option>
+                    </select><br>
+                    <hr>
+                    <p>Округ</p>
+                    <select>
+                        <option>Центральный федеральный округ</option>
+                    </select><br>
+                    <p>Субъект</p>
+                    <select>
+                        <option>Адыгея</option>
+                    </select><br>
+                    <hr>
+                    <p>Гражданство</p>
+                    <select>
+                        <option>Российская Федерация</option>
+                    </select><br>
+                    <p>Возраст</p>
+                    <select>
+                        <option>Не выбрано</option>
+                    </select><br>
+                    <p>Пол</p>
+                    <label>Женский<input type="radio" name="gender" value="female"></label>
+                    <label>Мужской<input type="radio" name="gender" value="male" checked></label><br>
+                    <p>Семейное положение</p>
+                    <label>Не в браке<input type="radio" name="marriage" value="not-married"></label>
+                    <label>В браке<input type="radio" name="marriage" value="married" checked></label><br>
+                    <p>Инвалидность</p>
+                    <label>Нет<input type="radio" name="disability" value="not-disabled"></label>
+                    <label>Есть<input type="radio" name="disability" value="disabled" checked></label><br>
+                    <hr>
+                    <p>Занятость</p>
+                    <select>
+                        <option>Работает</option>
+                    </select><br>
+                    <p>Образование</p>
+                    <select>
+                        <option>Дошкольное</option>
+                    </select><br>
+                    <p>Доход</p>
+                    <input type="text" name="income"><br>
+                    <hr>
+                    <input type="submit">
+                </form>
+            </div>
+        </div>
+        <header class="sub-header district-header">
+            <a class="back-button" href="">Назад</a>
+            <div class="district-summary">
+                <div class="district-name">СВЕРДЛОВСКАЯ ОБЛАСТЬ</div>
+                <div class="district-pop">4 794 745 чел.</div>
+            </div>
+            <div class="calendar">
+                <div class="calender-curr-date">07.11.2018</div>
+                <img class="calendar-icon" src="resources/images/icons/nav-date.svg">
+            </div>
+        </header>
+        <div class="content">
+            <table class="people-list">
+                <tr>
+                    <th>№</th>
+                    <th>Фото</th>
+                    <th>Социальный номер</th>
+                    <th>Фамилия Имя Отчество</th>
+                    <th>Возраст</th>
+                    <th>Пол</th>
+                    <th>Семейное положение</th>
+                    <th>Военная обязанность</th>
+                    <th>Занятость</th>
+                    <th>Инвалидность</th>
+                    <th>Предприниматель</th>
+                    <th>Образование</th>
+                    <th>Земля</th>
+                    <th>Недвижимость</th>
+                    <th>Автомобиль</th>
+                    <th>Доход</th>
+                    <th><img src="resources/images/icons/nav-place.svg"></th>
+                </tr>
+            </table>
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <script src="http://ajax.microsoft.com/ajax/jquery.templates/beta1/jquery.tmpl.min.js"></script>
+    <script type="text/javascript">
+        $.ajax("resources/json/temp_short.json", {
+            success: function( data ) {
+                console.log(data);
+                $("#peopleTmpl").tmpl(data).appendTo(".people-list");
+            }
+        });
+    </script>
+    <script type="text/javascript">
+        $(".calender-curr-date").html(function() {
+            var currDate = new Date();
+            return currDate.getDate()+"."+(currDate.getMonth()+1)+"."+currDate.getFullYear();
+        });
+    </script>
+    <script type="text/javascript">
+        function getAge(birthday) {
+            return ((Date.now() - Date.parse(birthday.replace(/[.]/g, "-")))/1000/60/60/24/31/12).toFixed(0);
+        }
+        var i=1;
+        function tabIndex(){
+            return i++;
+        }
+    </script>
+    <script id="peopleTmpl" type="text/x-jquery-tmpl">
+        <tr>
+            <td>${tabIndex()}</td>
+            <td>
+                {{if $item.data.original.gender === "woman" && getAge($item.data.original.birthday) < 18}}
+                    <img src="resources/images/avatar/girl.svg">
+                {{else $item.data.original.gender === "man" && getAge($item.data.original.birthday) < 18}}
+                    <img src="resources/images/avatar/boy.svg">
+                {{else $item.data.original.gender === "woman" && getAge($item.data.original.birthday) < 60}}
+                    <img src="resources/images/avatar/woman.svg">
+                {{else $item.data.original.gender === "man" && getAge($item.data.original.birthday) < 65}}
+                    <img src="resources/images/avatar/man.svg">
+                {{else $item.data.original.gender === "woman" && getAge($item.data.original.birthday) >= 60}}
+                    <img src="resources/images/avatar/old-woman.svg">
+                {{else $item.data.original.gender === "man" && getAge($item.data.original.birthday) >= 65}}
+                    <img src="resources/images/avatar/old_man.svg">
+                {{/if}}
+            </td>
+            <td>${original.fid.slice(0,4)}-${original.fid.slice(4,8)}-${original.fid.slice(8,12)}</td>
+            <td>${person.LASTNAME[0]}${person.LASTNAME.slice(1).toLowerCase()} ${person.FIRSTNAME[0]}${person.FIRSTNAME.slice(1).toLowerCase()} ${person.MIDDLENAME[0]}${person.MIDDLENAME.slice(1).toLowerCase()}</td>
+            <td>${getAge(original.birthday)}</td>
+            <td><img src="resources/images/icons/person-${original.gender}.svg"></td>
+            <td><img src="resources/images/icons/person-${original.married ? "married" : ""}.svg" alt=""></td>
+            <td><img src="resources/images/icons/person-${original.reservist ? "army" : ""}.svg" alt=""></td>
+            <td>${original.employment ? "Работает" : "Не работает"}</td>
+            <td><img src="resources/images/icons/person-${original.disability ? "disability" : ""}.svg" alt=""></td>
+            <td><img src="resources/images/icons/person-${original.business ? "business" : ""}.svg" alt=""></td>
+            <td></td>
+            <td><img src="resources/images/icons/person-${original.hasLand ? "hasLand" : ""}.svg" alt=""></td>
+            <td><img src="resources/images/icons/person-${original.hasProperty ? "hasProperty" : ""}.svg" alt=""></td>
+            <td></td>
+            <td>${original.income}</td>
+            <td></td>
+        </tr>
+    </script>
+</body>
+</html>
