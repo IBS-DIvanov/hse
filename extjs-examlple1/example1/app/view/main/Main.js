@@ -14,8 +14,7 @@ Ext.define('example1.view.main.Main', {
         'Ext.window.MessageBox',
         'example1.view.main.List',
         'example1.view.main.MainController',
-        'example1.view.main.MainModel',
-        'example1.view.person.PersonPanel'
+        'example1.view.main.MainModel'
     ],
 
     controller: 'main',
@@ -76,12 +75,6 @@ Ext.define('example1.view.main.Main', {
     },
 
     items: [{
-        title: 'Люди',
-        iconCls: 'fa-user-secret',
-        items: [{
-            xtype: 'person-panel'
-        }]
-    }, {
         title: 'Home',
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
