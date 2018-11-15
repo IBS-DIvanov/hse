@@ -167,6 +167,30 @@ width: 50px;
     margin: left;
     text-align: left;
 }
+.titleData{
+text-align: left;
+padding: 10px 10px 0px 15px;
+     color: #000080;
+      font-size: 18px;
+      font-weight: bold;
+
+}
+
+hr {
+border: none;
+height: 1px;
+}
+.withShadow{
+box-shadow: 0em 0.4em 5px rgba(122,122,122,0.5);
+
+}
+.betweenData{
+background-color: #00A7E1;; /* Цвет линии */
+color: #00A7E1; /* Цвет линии для IE6-7 */
+width: 96%;
+align: center;
+}
+
 
 
 a{
@@ -208,6 +232,47 @@ nav {
     font-family: OpenSansSemiBold;
     font-size: 11px;
 }
+.avatar-header{
+text-align:center;
+width:50%;
+ }
+
+.b1 {
+     background: inherit; /* Синий цвет фона */
+     color: white; /* Белые буквы */
+     font-size: 9pt; /* Размер шрифта в пунктах */
+     width:100%;
+     text-align: left;
+     border: 0;
+padding: 10px 10px 10px 15px;
+     }
+
+     .b2 {
+          background: inherit; /* Синий цвет фона */
+          color: white; /* Белые буквы */
+          font-size: 9pt; /* Размер шрифта в пунктах */
+          width:100%;
+          text-align: left;
+          border: none;
+          border-left: solid;
+          padding: 10px 10px 10px 15px;
+          }
+
+.b3 {
+          background: inherit; /* Синий цвет фона */
+          color: white; /* Белые буквы */
+          font-size: 9pt; /* Размер шрифта в пунктах */
+          width:100%;
+          text-align: center;
+          border-color: blue;
+          border-left: 0px;
+          border-right: 0px;
+          border-top: 0px;
+          border-bottom: 1px, solid;
+          padding: 10px 10px 10px 15px;
+          }
+
+
 .nav_header{
     display:flex;
     align-items:center;
