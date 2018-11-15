@@ -4,9 +4,15 @@ body {
     display: grid;
     min-height: 100vh;
     grid-template-columns: 220px 1fr;
-    grid-template-rows: min-content 1fr;
+    grid-template-rows: 7vh 1fr;
     font-family: Regular;
     overflow: hidden;
+}
+
+.header {
+    padding: 5px 0 5px 0;
+
+    height: 50px;
 }
 
 header {
@@ -14,6 +20,7 @@ header {
     grid-row: 1;
     background-color: #E8F0FA;
     padding: 7px 8px 8px;
+    min-height: 7vh;
 }
 
 nav {
@@ -25,10 +32,6 @@ nav {
 }
 
 nav .header {
-    padding: 5px 0 5px 0;
-
-    height: 40px;
-
     vertical-align: middle;
     text-align: center;
 
@@ -55,11 +58,9 @@ article {
 }
 
 article .header {
-    padding: 5px 0 5px 0;
     display: grid;
     grid-template-columns: 1fr auto;
 
-    height: 40px;
 }
 
 .left {
@@ -76,35 +77,6 @@ article .header {
 
     display: flex;
     align-items: center;
-}
-
-.td-img {
-    text-align: center;
-}
-
-article table {
-    color: white;
-    border-spacing: 0;
-
-}
-
-article td {
-    font-size: 13px;
-    vertical-align: top;
-    background-color: #4B7CB4;
-    border-right: 1px solid #98C8FF;
-    border-top: 2px solid #29486A;
-}
-
-article th {
-    position: sticky;
-    top: 0;
-    font-size: 12px;
-    vertical-align: top;
-    text-align: left;
-    font-weight: 100;
-    background-color: #29486A;
-    border-right: 1px solid #4B7CB4;
 }
 
 a {
@@ -172,6 +144,7 @@ input {
 .scroll {
     overflow: auto;
     width: 100%;
-    height: 88vh;
-
+    height: 84.5vh;
 }
+
+

@@ -1,0 +1,32 @@
+.td-img {
+    text-align: center;
+}
+
+.td-army {
+    background: url(/hse/resources/images/icons/person-army.svg) no-repeat top center #4B7CB4;
+}
+
+article table {
+    color: white;
+    border-spacing: 0;
+
+}
+
+article td {
+    font-size: 13px;
+    vertical-align: top;
+    background-color: #4B7CB4;
+    border-right: 1px solid #98C8FF;
+    border-top: 2px solid #29486A;
+}
+
+article th {
+    position: sticky;
+    top: 0;
+    font-size: 12px;
+    vertical-align: top;
+    text-align: left;
+    font-weight: 100;
+    background-color: #29486A;
+    border-right: 1px solid #4B7CB4;
+}
