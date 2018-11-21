@@ -1,0 +1,34 @@
+
+.person-info{
+	background-color: #4b7cb4;
+  font-family: 'Open Sans', sans-serif;
+  color: #ffffff;
+  display: grid;
+  grid-template-columns: 8fr 3fr 1fr;
+  grid-auto-rows: minmax(100px, auto);
+  text-align: left;
+  border: 1px solid #375d88;
+
+height: 50px;
+padding-top: 10px;
+padding-bottom: 10px;
+}
+.person-info__text{
+  font-size: 12pt;
+  font-style: normal;
+}
+/*мне сдесь очень плохо*/
+.person-info__header{
+  font-size: 8pt;
+  opacity: 0.5;
+  font-style: normal;
+  align-self: center;
+}
+.person-info__content{
+  text-align: left;
+  padding-top: 10px;
+  }
+.person-info__img{
+  max-height: 15px;
+
+}

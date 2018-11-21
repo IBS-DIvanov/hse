@@ -5,8 +5,8 @@ html, body {
   min-width: 100%;
 }
 header {
-  height: 60px;
-  background: linear-gradient(to bottom, #FFFFFF, #D7E5F5); 
+  height: 70px;
+  background: linear-gradient(to bottom, #FFFFFF, #D7E5F5);
   display: grid;
   grid-template-columns: 60px auto auto 60px;
   min-width: 100%;
@@ -41,7 +41,8 @@ header {
 }
 .container {
     display: grid;
-    
+    grid-template-columns: 1fr;
+
 }
 .main{
   grid-area: main;
