@@ -1,0 +1,39 @@
+.inner-content{
+  font-family: 'Open Sans', sans-serif;
+  display: grid;
+}
+hr{
+  margin-left: 20px;
+  margin-right: -20px;
+}
+.inner-content__header{
+  color: #375d88;
+  font-size: 10pt;
+  align-self: flex-start;
+  grid-row-start: 1;
+  grid-row-end: 2;
+}
+
+.content-block{
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-columns:
+
+  grid-row-start: 2;
+  grid-row-end: 3;
+}
+.content-block__header{
+  opacity: 0.5;
+  font-size: 8pt;
+
+}
+.content-block__text{
+font-weight: normal;
+font-size: 12pt;
+}
+p {
+    margin-block-start: 5px;
+    margin-block-end: 5px;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+}
