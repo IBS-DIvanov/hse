@@ -5,10 +5,14 @@
 
     <link rel="stylesheet" href="style/style.css">
       <link rel="stylesheet" href="style/wrapper.css">
-      <link rel="stylesheet" href="style/person-info.css">
-        <link rel="stylesheet" href="style/pd-subheader.css">
-        <link rel="stylesheet" href="style/content.css">
 
+      <link rel="stylesheet" href="style/sidebar/sidebar.css">
+
+      <link rel="stylesheet" href="style/content/person-info.css">
+      <link rel="stylesheet" href="style/content/pd-subheader.css">
+			<link rel="stylesheet" href="style/content/id-bar.css">
+      <link rel="stylesheet" href="style/content.css">
+      <link rel="stylesheet" href="style/content/inner-content.css">
 
   </head>
   <body>
@@ -26,17 +30,15 @@
         <img src="style/img/userpic.svg">
     </div>
     </header>
-
   <div class="wrapper">
     <div class="sidebar">
       <div class="back-to-home">
-        <div class="back-to-home__pic">
-          <img src="style/img/nav-home.svg">
-        </div>
-        <span class="back-to-home__text">На главную страницу</span>
+        <div class="back-to-home__content">
+            <img class="back-to-home__pic" src="style/img/nav-home.svg">
+            <span class="back-to-home__text">На главную страницу</span></div>
       </div>
       <div class="profile">
-          <img src="style/img/userpic.svg">
+          <img class="profile__img" src="style/img/userpic.svg">
       </div>
       <ul class="menu">
         <li class="menu__element">Персональные данные</li>
@@ -44,11 +46,15 @@
         <li class="menu__element">Занятость</li>
         <li class="menu__element">Имущество</li>
         <li class="menu__element">Доход</li>
-        <li class="menu__element">Актовые записи</li>
-      </ul>
-
+        <li class="menu__element">Актовые записи</li></ul>
     </div>
+
     <div class="content">
+			<div class="id-bar">
+				<span class="id-bar__back">< Назад</span>
+        <span class="id-bar__header">Социальный номер</span>
+        <span class="id-bar__text">1001-6155-1212</span>
+			</div>
       <div class="person-info">
         <div class="person-info__fio">
           <span class="person-info__header">Фамилия Имя Отчество</span>
@@ -72,10 +78,79 @@
     <div class="pd-subheader">
       <span class="pd-subheader__text">Персональные данные</span>
     </div>
-    <div class="inner-content"></div>
+<div class="inner-content">
+<p class="inner-content__header">Паспорт</p>
+<div class="content-block">
+  <p class="content-block__header">Серия</p>
+  <p class="content-block__text">64 86</p>
+</div>
+<div class="content-block">
+  <p class="content-block__header">Номер</p>
+  <p class="content-block__text">663186</p>
+</div>
+<div class="content-block">
+  <p class="content-block__header">Кем выдан</p>
+  <p class="content-block__text">ОТДЕЛЕНИЕ УФМС РОССИИ ПО ЗАБАЙКАЛЬСКОМУ КРАЮ В МОГОЧИНСКОМ Р-НЕ</p>
+</div>
+</div>
+<hr>
 
-    </div>
+<div class="inner-content">
+<p class="inner-content__header">Адрес регистрации</p>
+<div class="content-block">
+  <span class="content-block__header">Регион</span>
+  <span class="content-block__text">Свердловская Обл</span>
+</div>
+<div class="content-block">
+  <p class="content-block__header">Населенный пункт</p>
+  <p class="content-block__text">Краснотурьинск</p>
+</div>
+<div class="content-block">
+  <p class="content-block__header">Улица</p>
+  <p class="content-block__text">Рюмина</p>
+</div>
+<div class="content-block">
+  <p class="content-block__header">Дом</p>
+  <p class="content-block__text">17</p>
+</div>
+<div class="content-block">
+  <p class="content-block__header">Квартира</p>
+  <p class="content-block__text">63</p>
+</div>
+</div>
+<hr>
+<div class="inner-content">
+  <p class="inner-content__header">Дата прибытия в РФ</p>
+  <div class="content-block">
+    <p class="content-block__header">Число</p>
   </div>
+  <div class="content-block">
+    <p class="content-block__header">Месяц</p>
+  </div>
+  <div class="content-block">
+    <p class="content-block__header">Год</p>
+  </div>
+</div>
+<div class="inner-content">
+  <p class="inner-content__header">Контакты</p>
+  <div class="content-block">
+    <p class="content-block__header">Мобильный телефон</p>
+    <p class="content-block__text">+7(343)232-23-23</p>
+  </div>
+  <div class="content-block">
+  <p class="content-block__header">Домашний телефон</p>
+  <p class="content-block__text">+7(343)343-343-3</p>
+</div>
+  <div class="content-block">
+  <p class="content-block__header">Рабочий телефон</p>
+  <p class="content-block__text">+7(926)343-34-33</p>
+</div>
+  <div class="content-block">
+  <p class="content-block__header">Электронная почта</p>
+  <p class="content-block__link">vale@gmail.com</p>
+</div></div>
+<hr>
+</div>
 
 
   </body>

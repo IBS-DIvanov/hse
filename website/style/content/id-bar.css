@@ -1,0 +1,25 @@
+.id-bar{
+  display: grid;
+  height:50px;
+  background-color: #2f5179;
+  grid-template-columns: 1fr 1fr 14fr;
+  grid-gap: 20px;
+  font-family: 'Open Sans', sans-serif;
+  align-items: center;
+}
+.id-bar__back{
+  color: #00b0ff;
+  font-size: 10pt;
+
+}
+.id-bar__header{
+  font-size: 8pt;
+  opacity: 0.5;
+  color: #d8d8d8;
+}
+.id-bar__text{
+  font-weight: normal;
+  font-size: 18pt;
+  color: #d8d8d8;
+
+}

@@ -2,6 +2,3 @@
 	display: grid;
 	grid-template-columns: 2fr 10fr;
 }
-.sidebar{
-	background-color: #375d88;
-}

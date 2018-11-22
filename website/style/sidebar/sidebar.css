@@ -1,0 +1,48 @@
+/*а пачемууу туут ничегооо не роботоит*/
+.sidebar{
+	font-family: 'Open Sans', sans-serif;
+	background-color: #375d88;
+	display: grid;
+	grid-template-rows: 50px 120px auto;
+}
+.back-to-home{
+	border-bottom: 1px solid #98c8ff;
+	display: grid;
+	justify-content: center;
+  align-items: center;
+}
+.back-to-home__content{
+	color: #00b0ff;
+	font-size: 8pt;
+	display: grid;
+	grid-template-columns: 20px auto;
+}
+.back-to-home__pic{
+	width: 15px;
+}
+.profile{
+	display: grid;
+	align-items: center;
+	justify-content: center;
+}
+.profile__img{
+	height: 100px;
+	width: 100px;
+}
+
+.menu{
+	padding-top: 50px;
+	margin-left: -40px;
+	list-style-type: none;
+}
+
+.menu__element{
+	font-size: 14px;
+	color: #98c8ff;
+	padding: 10px;
+	padding-left: 20px;
+}
+hr{
+	color: #375d88;
+	background-color: #375d88;
+}
