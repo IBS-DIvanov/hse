@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="20px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 49 (51002) - http://www.bohemiancoding.com/sketch -->
+    <title>ic_place_black_24px</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="01-04-MainScreen-TableView" transform="translate(-1868.000000, -152.000000)">
+            <g id="ic_place_black_24px" transform="translate(1866.000000, 150.000000)">
+                <g id="ic_Map_24px">
+                    <polygon id="Shape" points="0 0 24 0 24 24 0 24"></polygon>
+                    <g id="Group" transform="translate(2.000000, 2.000000)" fill="#FFFFFF" fill-rule="nonzero">
+                        <polygon id="Shape" points="20 0 0 0 0 8 2 8 2 2 17 2 18 2 20 2"></polygon>
+                        <polygon id="Shape" points="18 15 18 18 2 18 2 16 0 16 0 20 20 20 20 15"></polygon>
+                        <polygon id="Shape" points="20 3 18 3 18 4 16 4 16 5 14 5 14 7 12 7 12 8 9 8 9 7 4 7 4 9 2 9 2 12 0 12 0 14 4 14 4 12 5 12 5 13 7 13 7 15 9 15 9 16 14 16 14 15 16 15 16 11 19 11 19 13 20 13 20 10 19 10 19 7 19 5 20 5"></polygon>
+                        <polygon id="Shape" points="4 5 3 5 3 7 4 7"></polygon>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
