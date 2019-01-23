@@ -1,0 +1,49 @@
+CREATE TABLE customer_statuses 
+( 
+	id 		SERIAL PRIMARY KEY,
+	name 	VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE customers
+( 
+	id 			SERIAL PRIMARY KEY, 
+	first_name 	VARCHAR(50) NOT NULL, 
+	last_name 	VARCHAR(50), 
+	id_status 	INTEGER REFERENCES customer_statuses(id) ON DELETE RESTRICT,
+	id_company 	INTEGER REFERENCES companies(id) ON DELETE RESTRICT, 
+	address 	VARCHAR(50), 
+	telephone 	VARCHAR(15)
+);
+
+CREATE TABLE order_types 
+( 
+	id 		SERIAL PRIMARY KEY,
+	name 	VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE orders
+(
+	id 					SERIAL PRIMARY KEY, 
+	number				VARCHAR(15) NOT NULL, 
+	name				VARCHAR(50) NOT NULL,
+	registration_date	DATE NOT NULL,
+	end_date			DATE,
+	update_date			DATE,
+	id_type				INTEGER REFERENCES order_types(id) ON DELETE RESTRICT,
+	id_contractor		INTEGER REFERENCES contractors(id) ON DELETE RESTRICT,	
+	id_customer			INTEGER REFERENCES customers(id) ON DELETE RESTRICT
+);
+
+CREATE TABLE order_assignment_table
+( 
+	id 				SERIAL PRIMARY KEY,
+	id_order		INTEGER REFERENCES orders(id) ON DELETE RESTRICT,
+	id_assignment	INTEGER REFERENCES assignments(id) ON DELETE RESTRICT
+);
+
+CREATE TABLE order_act_table
+( 
+	id 				SERIAL PRIMARY KEY,
+	id_order		INTEGER REFERENCES orders(id) ON DELETE RESTRICT,
+	id_act			INTEGER REFERENCES acts(id) ON DELETE RESTRICT
+);
