@@ -31,7 +31,8 @@ CREATE TABLE orders
 	update_date			DATE,
 	id_type				INTEGER REFERENCES order_types(id) ON DELETE RESTRICT,
 	id_contractor		INTEGER REFERENCES contractors(id) ON DELETE RESTRICT,	
-	id_customer			INTEGER REFERENCES customers(id) ON DELETE RESTRICT
+	id_customer			INTEGER REFERENCES customers(id) ON DELETE RESTRICT,
+	description 		TEXT
 );
 
 CREATE TABLE order_assignment_table
