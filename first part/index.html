@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+
+<!-- TODO удаление строк из таблицы при обновлении --> 
+<!-- TODO список фильтров доделать --> 
+<!-- TODO связать фильтр и данные в таблице чтобы фильтр работал --> 
+<!-- TODO прикрутить шрифты --> 
+<!-- TODO  --> 
+<!-- TODO  --> 
+    <html>
+    <head>
+        <script src="Scripts/jquery-1.5rc1.js" type="text/javascript"></script>
+        <script src="Scripts/jquery.tmpl.js" type="text/javascript"></script>
+        <script type="text/javascript">
+        var dataItems = [
+  {
+    "original": {
+      "birthday": "1961.09.08",
+      "business": false,
+      "disability": false,
+      "employment": true,
+      "fid": "100170116698",
+      "gender": "woman",
+      "hasLand": true,
+      "hasProperty": true,
+      "income": 26746,
+      "married": false,
+      "name": "НАПАЛКОВА СВЕТЛАНА",
+      "number": "2780-9343-43727",
+      "personId": "111PJ",
+      "regionId": "22",
+      "reservist": false
+    },
+    "person": {
+      "ACTUALITY_START_DATE": "21122017",
+      "ADDR_REG": "656039, РОССИЯ, , , Г БАРНАУЛ, , УЛ МАЛАХОВА, 95, , 312",
+      "ADDR_REG_CITY": "Г БАРНАУЛ",
+      "ADDR_REG_COUNTRY": "РОССИЯ",
+      "ADDR_REG_DETAILS": "95, , 312",
+      "ADDR_REG_STREET": "УЛ МАЛАХОВА",
+      "ADDR_REG_ZIP": "656039",
+      "BIRTHDAY": "08091961",
+      "EMAIL_ARR": [],
+      "FID": "100170116698",
+      "FIRSTNAME": "СВЕТЛАНА",
+      "GUID": "1-11PJ",
+      "HASH_FI": "bb2caf3127c45089770d5c512aad44abf3d046ca5cbb1a0fefe5807b3f42f737",
+      "HASH_FIO": "0a33f3cfbce7fef851ec08eec52dd3eed67312412b1d145830b1777f8c731890",
+      "INN": "222204372263",
+      "LASTNAME": "НАПАЛКОВА",
+      "MIDDLENAME": "ВИТАЛЬЕВНА",
+      "SEX": "2"
+    },
+    "employer": {
+      "GUID": "1-11PJ",
+      "employer": [
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPLR_ADDRESS": "131000,ГОРОД МОСКВА, , , ,ШОССЕ ВАРШАВСКОЕ, 37, ,",
+          "EMPLR_BRNCHS": "87",
+          "EMPLR_NAME": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"ПОЧТА РОССИИ\"",
+          "FID": "100170116698",
+          "GUID": "1-11PJ",
+          "INN": "7724261610",
+          "KPP": "772401001",
+          "LOCATION": "77",
+          "OGRN": "1037724007276",
+          "OKTMO": "71956000",
+          "OKVED_ADD": "18.11,18.2,18.20,33.12,35.12,35.22,35.30.5,41.20,43.21,45.20,46.1,46.21,47.11,47.25,47.61,47.73,47.78.8,47.99,52.10,52.21.24,52.29,53.10.2,53.10.4,53.10.9,55.2,55.90,58.14,62.01,62.02,62.09,63.11,64.19,71.12.62,73.11,74.30,82.19,84.24,84.25.1,85.23,86.10,91.01,95.11",
+          "OKVED_MAIN": "53.10",
+          "OPF": "Федеральные государственные унитарные предприятия",
+          "PERIOD": "14",
+          "REG_DATE": "13022003",
+          "STAFF_CNT": "504696"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPLR_ADDRESS": "131000,ГОРОД МОСКВА, , , ,ШОССЕ ВАРШАВСКОЕ, 37, ,",
+          "EMPLR_BRNCHS": "83",
+          "EMPLR_NAME": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"ПОЧТА РОССИИ\"",
+          "FID": "100170116698",
+          "GUID": "1-11PJ",
+          "INN": "7724261610",
+          "KPP": "772401001",
+          "LOCATION": "77",
+          "OGRN": "1037724007276",
+          "OKTMO": "89621456",
+          "OKVED_ADD": "18.11,18.2,18.20,33.12,35.12,35.22,35.30,35.30.5,41.20,43.21,45.20,46.1,46.21,47.11,47.25,47.61,47.73,47.78.8,47.99,52.10,52.21.24,52.29,53.10.2,53.10.4,53.10.9,55.2,55.90,58.14,60.10,60.20,61.10,62.01,62.02,62.09,63.11,64.19,71.12.62,73.11,74.30,82.19,84.24,84.25.1,85.23,86.10,91.01,93.11,93.19,93.29.9,95.11",
+          "OKVED_MAIN": "53.10",
+          "OPF": "Федеральные государственные унитарные предприятия",
+          "PERIOD": "15",
+          "REG_DATE": "13022003",
+          "STAFF_CNT": "484096"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPLR_ADDRESS": "131000,ГОРОД МОСКВА, , , ,ШОССЕ ВАРШАВСКОЕ, 37, ,",
+          "EMPLR_BRNCHS": "84",
+          "EMPLR_NAME": "ФЕДЕРАЛЬНОЕ ГОСУДАРСТВЕННОЕ УНИТАРНОЕ ПРЕДПРИЯТИЕ \"ПОЧТА РОССИИ\"",
+          "FID": "100170116698",
+          "GUID": "1-11PJ",
+          "INN": "7724261610",
+          "KPP": "772401001",
+          "LOCATION": "77",
+          "OGRN": "1037724007276",
+          "OKTMO": "05701000",
+          "OKVED_ADD": "18.11,18.2,18.20,33.12,35.12,35.22,35.30,35.30.5,41.20,43.21,45.20,46.1,46.21,47.11,47.25,47.61,47.73,47.78.8,47.99,52.10,52.21.24,52.29,53.10.2,53.10.4,53.10.9,55.2,55.90,58.14,60.10,60.20,61.10,62.01,62.02,62.09,63.11,64.19,66.19,69.10,69.20,70.10.1,70.10.2,70.22,71.12.62,71.20,72.19,73.11,73.20,74.30,74.90,82.19,84.24,84.25.1,85.23,86.10,91.01,93.11,93.19,93.29.9,95.11",
+          "OKVED_MAIN": "53.10",
+          "OPF": "Федеральные государственные унитарные предприятия",
+          "PERIOD": "16",
+          "REG_DATE": "13022003",
+          "STAFF_CNT": "485271"
+        }
+      ]
+    },
+    "periodic": {
+      "GUID": "1-11PJ",
+      "periodic": [
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPL_CNT": "1",
+          "FID": "100170116698",
+          "GUID": "1-11PJ",
+          "INCOME": "261828",
+          "LAND_AREA": "1370.0",
+          "LAND_CNT": "1",
+          "PERIOD": "15",
+          "PERIOD_TYPE": "Y1",
+          "REAL_EST_AREA": "67.0",
+          "REAL_EST_CNT": "1"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPL_CNT": "1",
+          "FID": "100170116698",
+          "GUID": "1-11PJ",
+          "INCOME": "274658",
+          "LAND_AREA": "1370.0",
+          "LAND_CNT": "1",
+          "PERIOD": "14",
+          "PERIOD_TYPE": "Y1",
+          "REAL_EST_AREA": "67.0",
+          "REAL_EST_CNT": "1"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPL_CNT": "1",
+          "FID": "100170116698",
+          "GUID": "1-11PJ",
+          "INCOME": "320953",
+          "LAND_AREA": "1370.0",
+          "LAND_CNT": "1",
+          "PERIOD": "16",
+          "PERIOD_TYPE": "Y1",
+          "REAL_EST_AREA": "67.0",
+          "REAL_EST_CNT": "1"
+        }
+      ]
+    }
+  },
+  {
+    "original": {
+      "birthday": "2006.12.30",
+      "business": false,
+      "disability": false,
+      "employment": false,
+      "fid": "100108966935",
+      "gender": "woman",
+      "hasLand": false,
+      "hasProperty": false,
+      "income": 0,
+      "married": false,
+      "name": "Метелищенкова Анастасия",
+      "number": "9516-8619-19295",
+      "personId": "111U9",
+      "regionId": "83",
+      "reservist": false
+    },
+    "person": {
+      "ACTUALITY_START_DATE": "21122017",
+      "ADDR_REG": "629805, РОССИЯ, ЯМАЛО-НЕНЕЦКИЙ АО, , Г НОЯБРЬСК, , УЛ МАГИСТРАЛЬНАЯ, 103, , 80",
+      "ADDR_REG_CITY": "Г НОЯБРЬСК",
+      "ADDR_REG_COUNTRY": "РОССИЯ",
+      "ADDR_REG_DETAILS": "103, , 80",
+      "ADDR_REG_REGION": "ЯМАЛО-НЕНЕЦКИЙ АО",
+      "ADDR_REG_STREET": "УЛ МАГИСТРАЛЬНАЯ",
+      "ADDR_REG_ZIP": "629805",
+      "BIRTHDAY": "30122006",
+      "EMAIL_ARR": [],
+      "FID": "100108966935",
+      "FIRSTNAME": "АНАСТАСИЯ",
+      "GUID": "1-11U9",
+      "HASH_FI": "0ff52ecb7ce55040319c9dd8c72e68e02a5037135b16fb826a97fe35a3c896e7",
+      "HASH_FIO": "c4ea2b8535103e3e7148e7d9b9aefa06e84d54ef496593f28ff5dd9f6b5d1799",
+      "INN": "890510389707",
+      "LASTNAME": "МЕТЕЛИЩЕНКОВА",
+      "MIDDLENAME": "ЮРЬЕВНА",
+      "SEX": "2"
+    },
+    "periodic": {
+      "GUID": "1-11U9",
+      "periodic": [
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "FID": "100108966935",
+          "GUID": "1-11U9",
+          "IS_UNEMPLOYED": "1",
+          "PERIOD": "15",
+          "PERIOD_TYPE": "Y1"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "FID": "100108966935",
+          "GUID": "1-11U9",
+          "IS_UNEMPLOYED": "1",
+          "PERIOD": "14",
+          "PERIOD_TYPE": "Y1"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "FID": "100108966935",
+          "GUID": "1-11U9",
+          "IS_UNEMPLOYED": "1",
+          "PERIOD": "16",
+          "PERIOD_TYPE": "Y1"
+        }
+      ]
+    }
+  },
+  {
+    "original": {
+      "birthday": "1988.08.11",
+      "business": false,
+      "disability": false,
+      "employment": false,
+      "fid": "100147049933",
+      "gender": "man",
+      "hasLand": false,
+      "hasProperty": true,
+      "income": 0,
+      "married": false,
+      "name": "Баранов Дмитрий",
+      "number": "3247-3895-95132",
+      "personId": "1135W",
+      "regionId": "12",
+      "reservist": false
+    },
+    "person": {
+      "ACTUALITY_START_DATE": "21122017",
+      "ADDR_REG": "424007,РОССИЯ,МАРИЙ ЭЛ РЕСП,,ЙОШКАР-ОЛА Г,,СТРОИТЕЛЕЙ УЛ,34,,КВАРТИРА 206",
+      "ADDR_REG_CITY": "ЙОШКАР-ОЛА Г",
+      "ADDR_REG_COUNTRY": "РОССИЯ",
+      "ADDR_REG_DETAILS": "34, , КВАРТИРА 206",
+      "ADDR_REG_REGION": "МАРИЙ ЭЛ РЕСП",
+      "ADDR_REG_STREET": "СТРОИТЕЛЕЙ УЛ",
+      "ADDR_REG_ZIP": "424007",
+      "BIRTHDAY": "11081988",
+      "EMAIL_ARR": [],
+      "FID": "100147049933",
+      "FIRSTNAME": "ДМИТРИЙ",
+      "GUID": "1-135W",
+      "HASH_FI": "48c64c5abec6b3002963a4af0628201de24e09db5ef44fe435cd1ef4764765a1",
+      "HASH_FIO": "f6c6ab53cf967e1cf3284cc00b82884645c05c3ce4cb8b56ff63da3788c44790",
+      "INN": "121524124321",
+      "LASTNAME": "БАРАНОВ",
+      "MIDDLENAME": "НИКОЛАЕВИЧ",
+      "SEX": "1"
+    },
+    "employer": {
+      "GUID": "1-135W",
+      "employer": [
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPLR_ADDRESS": "127562,ГОРОД МОСКВА, , , ,УЛИЦА ДЕКАБРИСТОВ,ДОМ 8, ,",
+          "EMPLR_BRNCHS": "20",
+          "EMPLR_NAME": "ОБЩЕСТВО С ОГРАНИЧЕННОЙ ОТВЕТСТВЕННОСТЬЮ \"Ф.О.Н.\"",
+          "FID": "100147049933",
+          "GUID": "1-135W",
+          "INN": "9715010229",
+          "KPP": "774901001",
+          "LOCATION": "77",
+          "OGRN": "1147748005426",
+          "OKTMO": "45359000",
+          "OKVED_ADD": "43.99,46.90,47.7,56.10,56.10.1,56.10.3,56.30,58.19,68.20.2,70.22,73.11,79.11,82.99",
+          "OKVED_MAIN": "92.1",
+          "OPF": "Общества с ограниченной ответственностью",
+          "PERIOD": "15",
+          "REG_DATE": "10122014",
+          "STAFF_CNT": "57147"
+        }
+      ]
+    },
+    "periodic": {
+      "GUID": "1-135W",
+      "periodic": [
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "FID": "100147049933",
+          "GUID": "1-135W",
+          "IS_UNEMPLOYED": "1",
+          "PERIOD": "14",
+          "PERIOD_TYPE": "Y1",
+          "REAL_EST_AREA": "36.4",
+          "REAL_EST_CNT": "1"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "EMPL_CNT": "1",
+          "FID": "100147049933",
+          "GUID": "1-135W",
+          "INCOME": "115",
+          "PERIOD": "15",
+          "PERIOD_TYPE": "Y1",
+          "REAL_EST_AREA": "36.4",
+          "REAL_EST_CNT": "1"
+        },
+        {
+          "ACTUALITY_START_DATE": "21122017",
+          "FID": "100147049933",
+          "GUID": "1-135W",
+          "IS_UNEMPLOYED": "1",
+          "PERIOD": "16",
+          "PERIOD_TYPE": "Y1",
+          "REAL_EST_AREA": "36.4",
+          "REAL_EST_CNT": "1"
+        }
+      ]
+    }
+  }
+];
+            $(function () {
+                $('button').click(function(){
+                    // $.ajax({
+                    //     url: 'https://raw.githubusercontent.com/IBS-DIvanov/hse/develop/resources/json/temp_short.json',
+                    //     method: 'GET',
+                    //     xhrFields: {
+                    //         responseType: 'text'
+                    //     },
+                    //     success: function (data) {
+                    //         // alert(data);
+                    //         let tmp = JSON.parse(data)
+                    //         $('#table_item_tmpl').tmpl(tmp).appendTo('#table');
+                    //     }
+                    // });
+
+                  $('#table_item_tmpl').tmpl(dataItems).appendTo('#table');
+                });
+                // $('#table_item_tmpl').tmpl(dataItems).appendTo('#table');
+            });
+        </script>
+        <script id="update_table">
+            function test_f(){
+              // $('#table')[0].trigger('reset');;
+              $('#table_item_tmpl').tmpl(dataItems).appendTo('#table');
+            }
+          </script>
+
+        <div id="table_item_tmpl" style="display: none">
+          <div id="table_item">
+            <table class="table_people">
+                {{each dataItems}}
+                <tbody>
+                    <tr>
+                      <td class="table_item_column" style="width: 40px;">_</td>
+                      <td class="table_item_column" style="width: 60px;">_</td>
+                      <td class="table_item_column" style="width: 100px;">${original.fid}</td>
+                      <td class="table_item_column" style="width: 140px;">_</td>
+                      <td class="table_item_column" style="width: 100px;">${original.birthday}</td>
+                      <td class="table_item_column" style="width: 60px;">Пол</td>
+                      <td class="table_item_column" style="width: 100px;">_</td>
+                      <td class="table_item_column" style="width: 100px;">_</td>
+                      <td class="table_item_column" style="width: 80px;">_</td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                  {{/each}}
+                </table>
+              </div>
+        </div>
+
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>тест гос</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" media="screen" href="main.css" />
+    </head>
+    <body>
+      <div class="container">
+        <Header class="header">
+          <aside id="left_main_header">
+            <table>
+              <tbody>
+                <tr>
+                  <td><div style="width: 10px;"></div></td>
+                  <td>
+                    <img width="35px" class="header_pics" src="resources/images/russia.svg">
+                  </td>
+                  <td><div style="width: 10px;"></div></td>
+                  <td>
+                      <div style="display: inline-block;">ФЕДЕРАЛЬНЫЙ РЕСУРС О НАСЕЛЕНИИ</div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </aside>
+          <aside id="right_main_header">
+            <table>
+              <tbody>
+                <tr>
+                  <td>Борисов Сергей Викторович</td>
+                  <td><div style="width: 5px;"></div></td>
+                  <td>
+                      <img width="30px" class="header_pics" src="resources/images/avatar/avatar-header.svg">
+                  </td>
+                  <td><div style="width: 5px;"></div></td>
+                </tr>
+              </tbody>
+            </table>
+          </aside>
+        </Header>
+        <aside class="header_left">
+          <h3 id="filters_header_div">Фильтры</h3>
+        </aside>
+        <aside class="header_right">
+          <table style="width: 100%; height: 100%;">
+            <tr>
+              <td><div id="back_button" id="right_header_back_button">Назад</div></td>
+              <td><div id="region" id="left_header">СВЕРДЛОВСКАЯ ОБЛ</div></td>
+              <td><div id="people_count" id="right_header_back_button">люди</div></td>
+              <td><div id="date_now" id="right_header">27.09.2017</div></td>
+            </tr>
+          </table>
+          </aside>
+          <aside class="table_header">
+            <div id="table_header_block">
+              <table class="table_people">
+                <tbody>
+                  <tr>
+                      <td class="column_name" style="width: 40px;">№</td>
+                      <td class="column_name" style="width: 60px;">Фото</td>
+                      <td class="column_name" style="width: 100px;">Социальный<br>номер</td>
+                      <td class="column_name" style="width: 140px;">Фамилия имя<br>отчество</td>
+                      <td class="column_name" style="width: 100px;">Возраст</td>
+                      <td class="column_name" style="width: 60px;">Пол</td>
+                      <td class="column_name" style="width: 100px;">Семейное<br>положение</td>
+                      <td class="column_name" style="width: 100px;">Военная<br>обязанность</td>
+                      <td class="column_name" style="width: 80px;">Занятость</td>
+                      <td></td>
+                      <td></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            </aside>
+        <aside class="left">
+          <div id="filters">
+            <div class="filter_item">ФИО</div>
+            <div class="filter_item">Социальный номер</div>
+            <div class="filter_item">Округ</div>  
+            <div class="filter_item">Субъект</div>
+            <div class="filter_item">Гражданство</div>
+            <div class="filter_item">Возраст</div>
+            <div class="filter_item">Пол</div>
+            <div class="filter_item">Семейное положение</div>
+            <div class="filter_item">Инвалидность</div>
+            <div class="filter_item">Занятость</div>
+            <div class="filter_item">Образование</div>
+            <div class="filter_item">Доходы</div>
+            <button id="button">AJAX Load data</button>
+          </div>
+        </aside>
+        <aside class="right">
+          <div id="table">
+          </div>
+        </aside>
+        <footer id="footer"></footer>
+      </div>
+    </body>
+</html>

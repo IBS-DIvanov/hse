@@ -1,0 +1,152 @@
+.header{
+  grid-area: header;
+  background: #e4eefa;
+  color: #597596;
+}
+#footer{
+  grid-area: footer;
+  background: #dbdbdb;
+  color: black;
+}
+.left{
+  grid-area: left;
+  background: #375d88;
+  position: relative;
+  color: #98c8ff;
+}
+.right{
+  grid-area: right;
+  position: relative;
+  background: rgb(66, 66, 66);
+  color: #ffffff;
+}
+.header_left{
+  grid-area: header_left;
+  background: #375d88;
+  color: #98c8ff;
+  border-bottom: 1px solid #96c4f7;
+}
+.header_right{
+  grid-area: header_right;
+  background: #2f5179;
+  color: white;
+}
+.table_header{
+  grid-area: table_header;
+}
+.header_pics{
+  height: 40px;
+}
+#filters_header_div{
+  /* text-align: center;
+  vertical-align: middle; */
+  margin: 15px;
+  height: 50px;
+}
+
+#back_button{
+  /* background-color: red; */
+  color: #00b0f7;
+  width: 70px;
+}
+#region{
+  /* background-color: blue; */
+  width: 400px;
+}
+#people_count{
+  /* background-color: yellow; */
+  width: auto;
+}
+#date_now{
+  /* background-color: green; text-align: right; */
+  width: auto;
+}
+
+.column_name{
+  font-size: 9pt;
+  border-right: 1px solid #4b6d93; 
+  vertical-align: top;
+  padding: 6px;
+}
+.table_item_column{
+  font-size: 10pt;
+  border-right: 1px solid #96c5f9; 
+  padding: 6px;
+}
+
+.table_people{
+  height: 100%;
+}
+
+#table_header_block{
+  height: 50px;
+  background: #29486a;
+  color: white;
+}
+#table_item{
+  height: 40px;
+  border-bottom: 1px solid #2d4d70;
+  background: #4d7db2;
+}
+
+#right_main_header{
+  float: right;
+}
+#left_main_header{
+  float: left;
+}
+#right_header{
+
+}
+#left_header{
+
+}
+
+#filters{
+  overflow: auto;
+  position: absolute; 
+  left:0;
+  right:0;
+  top:0;
+  padding: 15px;
+  bottom:0;
+}
+
+.filter_item{
+  color: #98c8ff;
+}
+
+#table{
+  color: white;
+  overflow: auto;
+  position: absolute; 
+  left:0;
+  right:0;
+  top:0;
+  bottom:0;
+}
+
+.container{
+  display: grid;
+  grid-template-areas: "header header"
+                       "header_left header_right"
+                       "left table_header"
+                       "left right"
+                       "footer footer";
+  grid-template-columns: 250px auto;
+  grid-template-rows: 50px 50px 40px 1fr 0px;
+  /* min-height: 100%;
+  max-height: 100%;  */
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 80px;
+  min-height: 100vh;
+} 
+
+* {
+  padding: 0px;
+  margin: 0px;
+  font-family: Helvetica
+}
