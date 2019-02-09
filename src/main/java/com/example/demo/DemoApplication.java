@@ -15,11 +15,10 @@ public class DemoApplication {
 
     public static void main(String[] args) {
 		SpringApplication.run(DemoApplication.class, args);
-         Test(args);
+        // Test(args);
 
 	}
 
-    //TODO:Поставить драйвер postgres?
 	public static final Integer countOfRows = 10;
 	//takes limited count of rows in database, or all if counter = 0;
     public static final String SELECT_QUERY = countOfRows==0? "SELECT * FROM PEOPLE":"SELECT * FROM PEOPLE LIMIT "+countOfRows;
