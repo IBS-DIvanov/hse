@@ -1,4 +1,11 @@
 package com.example.demo;
 
-public class ConnectionTest {
+import junit.framework.TestCase;
+import static org.mockito.Mockito.*;
+
+
+public class ConnectionTest extends TestCase {
+
+    public void TakeAllRows(){
+     }
 }

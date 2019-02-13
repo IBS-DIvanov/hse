@@ -1,4 +1,4 @@
-//package Config;
+//package com.example.demo.Config;
 //
 //import org.springframework.context.annotation.AnnotationConfigApplicationContext;
 //import org.springframework.context.annotation.Bean;
