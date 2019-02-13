@@ -1,11 +1,12 @@
 package com.example.demo.Models;
 
 import com.sun.javafx.beans.IDProperty;
+import sun.management.LazyCompositeData;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
+import java.lang.invoke.LambdaConversionException;
+import java.util.ArrayList;
+
 @Entity
 public class Person {
 
@@ -22,10 +23,16 @@ public class Person {
     private String password;
 
 
-//region Getters & Setters
-public long getId() {
-    return id;
-}
+    @OneToMany(fetch = FetchType.LAZY)
+    ArrayList<Request> AskedRequests;
+    @OneToMany(fetch = FetchType.LAZY)
+    ArrayList<Request> onWorkRequests;
+
+
+    //region Getters & Setters
+    public long getId() {
+        return id;
+    }
 
     public void setId(long id) {
         this.id = id;
@@ -69,6 +76,22 @@ public long getId() {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public ArrayList<Request> getAskedRequests() {
+        return AskedRequests;
+    }
+
+    public void setAskedRequests(ArrayList<Request> askedRequests) {
+        AskedRequests = askedRequests;
+    }
+
+    public ArrayList<Request> getOnWorkRequests() {
+        return onWorkRequests;
+    }
+
+    public void setOnWorkRequests(ArrayList<Request> onWorkRequests) {
+        this.onWorkRequests = onWorkRequests;
     }
 
 //endregion

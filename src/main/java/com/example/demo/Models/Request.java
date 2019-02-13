@@ -1,7 +1,6 @@
 package com.example.demo.Models;
 
 import com.example.demo.Events.ItemUpdated;
-import com.example.demo.Events.UpdateResponder;
 
 import javax.persistence.*;
 import java.util.ArrayList;
@@ -9,7 +8,7 @@ import java.util.Date;
 import java.util.List;
 
 @Entity
-public class Request implements ItemUpdated {
+public class Request extends AbstractRequest implements ItemUpdated {
     @Id
     @GeneratedValue(generator = "increment")
     private long id;
@@ -26,8 +25,10 @@ public class Request implements ItemUpdated {
 
     private RequestType requestType;
 
-    @OneToMany
-    ArrayList<Act> acts;
+    @OneToMany(fetch = FetchType.LAZY)
+    ArrayList<Act> acts = new ArrayList<Act>();
+    @OneToMany(fetch = FetchType.LAZY)
+    ArrayList<Refferal> refferals = new ArrayList<Refferal> ();
 
 
     //region getters & setters
@@ -119,15 +120,17 @@ public class Request implements ItemUpdated {
     //endregion
 
 
+    public Request(long id, String title, Date dateFrom, Date dateTo, Date dateLastUpdate,  Person owner, Person executor, RequestType requestType) {
+        super(id, title, dateFrom, dateTo, dateLastUpdate);
 
+        this.owner = owner;
+        this.executor = executor;
+        this.requestType = requestType;
+    }
 
     public Request() {
+        super();
 
-        id = 0;
-        title = String.format("Title {}", id);
-        dateFrom = new Date();
-        dateLastUpdate= new Date();
-        dateTo = new Date();
         owner = new Person();
         executor = new Person();
         requestType = RequestType.None;
