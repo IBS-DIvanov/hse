@@ -73,7 +73,7 @@ public class Request {
                         i + ", '" + name + "', '" + beginDate + "', '" + date + "', '" + date + "', " + status + ", " + patient + ");");
             } else {
                 request.add("INSERT INTO public.\"Request\" (\"ID_Request\", \"R_Name\", \"R_Begin_Date\", \"R_End_Date\", \"R_Update_Date\", \"ID_Status\", \"ID_Patient\") VALUES(" +
-                        i + ", '" + name + "', '" + beginDate + "', '', '" + date + "', " + status + ", " + patient + ");");
+                        i + ", '" + name + "', '" + beginDate + "', null, '" + date + "', " + status + ", " + patient + ");");
             }
         }
 
