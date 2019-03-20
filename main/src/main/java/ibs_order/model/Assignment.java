@@ -1,11 +1,12 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
+
 
 import javax.persistence.*;
 import java.util.Date;
 
 @Entity
-@Table(name="acts")
-public class Act {
+@Table(name="assignments")
+public class Assignment {
 
     @Id
     @Column(name="id", nullable=false, unique=true)
@@ -24,11 +25,12 @@ public class Act {
     private Date update_date;
 
     @ManyToOne
-    @JoinColumn(name = "id_contractor", table = "contractors", referencedColumnName = "id")
-    Contractor id_contractor;
+    @JoinColumn(name = "id_contractor", /*table = "contractors",*/ referencedColumnName = "id")
+    private Contractor id_contractor;
 
     @Column(name="description")
     private String description;
+
 
     public Integer getId() {
         return id;

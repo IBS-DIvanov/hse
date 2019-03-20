@@ -1,4 +1,4 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -23,15 +23,15 @@ public class Contractor {
 
 
     @ManyToOne
-    @JoinColumn(name = "id_company", table = "companies", referencedColumnName = "id")
-    Company id_company;
+    @JoinColumn(name = "id_company", /*table = "companies",*/ referencedColumnName = "id")
+    private Company id_company;
 
 
 
 
     @ManyToOne
-    @JoinColumn(name = "id_position", table = "positions", referencedColumnName = "id")
-    Position id_position;
+    @JoinColumn(name = "id_position", /*table = "positions",*/ referencedColumnName = "id")
+    private Position id_position;
 
 
 

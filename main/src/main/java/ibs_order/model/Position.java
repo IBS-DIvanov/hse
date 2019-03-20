@@ -1,16 +1,15 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
 
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
-import javax.persistence.*;
-import java.util.ArrayList;
-import java.util.List;
+import javax.persistence.Table;
 
 @Entity
-@Table(name="order_types")
-public class OrderType {
+@Table(name="positions")
+public class Position {
+
     @Id
     @Column(name="id", nullable=false, unique=true)
     private Integer id;
@@ -18,7 +17,6 @@ public class OrderType {
 
     @Column(name="name", nullable=false)
     private String name;
-
 
     public Integer getId() {
         return id;

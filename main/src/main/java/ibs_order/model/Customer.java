@@ -1,7 +1,6 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name="customers")
@@ -17,12 +16,12 @@ public class Customer {
     private String last_name;
 
     @ManyToOne
-    @JoinColumn(name = "id_status", table = "customer_statuses", referencedColumnName = "id")
-    CustomerStatuses id_status;
+    @JoinColumn(name = "id_status", /*table = "customer_statuses",*/ referencedColumnName = "id")
+    private CustomerStatus id_status;
 
     @ManyToOne
-    @JoinColumn(name = "id_company", table = "companies", referencedColumnName = "id")
-    Company id_company;
+    @JoinColumn(name = "id_company", /*table = "companies",*/ referencedColumnName = "id")
+    private Company id_company;
 
     @Column(name="address")
     private String address;
@@ -55,7 +54,7 @@ public class Customer {
         this.last_name = last_name;
     }
 
-    public void setId_status(CustomerStatuses id_status) {
+    public void setId_status(CustomerStatus id_status) {
         this.id_status = id_status;
     }
 

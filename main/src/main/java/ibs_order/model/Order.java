@@ -1,4 +1,4 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
 
 
 import javax.persistence.*;
@@ -29,17 +29,16 @@ public class Order {
     private Date update_date;
 
     @ManyToOne
-    @JoinColumn(name = "id_type", table = "order_types", referencedColumnName = "id")
-    OrderType id_type;
+    @JoinColumn(name = "id_type", /*table = "order_types",*/ referencedColumnName = "id")
+    private OrderType type;
 
     @ManyToOne
-    @JoinColumn(name = "id_contractor", table = "contractors", referencedColumnName = "id")
-    Contractor id_contractor;
+    @JoinColumn(name = "id_contractor", /*table = "contractors",*/ referencedColumnName = "id")
+    private Contractor contractor;
 
     @ManyToOne
-    @JoinColumn(name = "id_customer", table = "customers", referencedColumnName = "id")
-    Customer id_customer;
-
+    @JoinColumn(name = "id_customer", /*table = "customers",*/ referencedColumnName = "id")
+    private Customer customer;
 
     @Column(name="description")
     private String description;
@@ -93,27 +92,27 @@ public class Order {
     }
 
     public OrderType getId_type() {
-        return id_type;
+        return type;
     }
 
     public void setId_type(OrderType id_type) {
-        this.id_type = id_type;
+        this.type = id_type;
     }
 
     public Contractor getId_contractor() {
-        return id_contractor;
+        return contractor;
     }
 
     public void setId_contractor(Contractor id_contractor) {
-        this.id_contractor = id_contractor;
+        this.contractor = id_contractor;
     }
 
     public Customer getId_customer() {
-        return id_customer;
+        return customer;
     }
 
     public void setId_customer(Customer id_customer) {
-        this.id_customer = id_customer;
+        this.customer = id_customer;
     }
 
     public String getDescription() {

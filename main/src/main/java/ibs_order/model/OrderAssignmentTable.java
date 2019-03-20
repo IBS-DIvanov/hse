@@ -1,8 +1,7 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
 
 
 import javax.persistence.*;
-import java.util.Date;
 
 @Entity
 @Table(name="order_assignment_table")
@@ -13,12 +12,12 @@ public class OrderAssignmentTable {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "id_order", table = "orders", referencedColumnName = "id")
-    Order id_order;
+    @JoinColumn(name = "id_order", /*table = "orders",*/ referencedColumnName = "id")
+    private Order id_order;
 
     @ManyToOne
-    @JoinColumn(name = "id_assignment", table = "assignments", referencedColumnName = "id")
-    Assignment id_assignment;
+    @JoinColumn(name = "id_assignment", /*table = "assignments",*/ referencedColumnName = "id")
+    private Assignment id_assignment;
 
     public Integer getId() {
         return id;

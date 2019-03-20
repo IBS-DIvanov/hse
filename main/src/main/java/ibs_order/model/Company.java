@@ -1,7 +1,8 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.*;
+import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity

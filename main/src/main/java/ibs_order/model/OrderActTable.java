@@ -1,4 +1,4 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
 
 import javax.persistence.*;
 
@@ -11,12 +11,12 @@ public class OrderActTable {
     private Integer id;
 
     @ManyToOne
-    @JoinColumn(name = "id_order", table = "orders", referencedColumnName = "id")
-    Order id_order;
+    @JoinColumn(name = "id_order", /*table = "orders",*/ referencedColumnName = "id")
+    private Order id_order;
 
     @ManyToOne
-    @JoinColumn(name = "id_act", table = "acts", referencedColumnName = "id")
-    Act id_act;
+    @JoinColumn(name = "id_act", /*table = "acts",*/ referencedColumnName = "id")
+    private Act id_act;
 
 
     public Integer getId() {

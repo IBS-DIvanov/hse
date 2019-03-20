@@ -1,4 +1,4 @@
-package com.ibs_order.order;
+package com.ibs_order;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -7,11 +7,10 @@ import org.springframework.test.context.junit4.SpringRunner;
 
 @RunWith(SpringRunner.class)
 @SpringBootTest
-public class OrderApplicationTests {
+public class DemoApplicationTests {
 
 	@Test
 	public void contextLoads() {
 	}
 
 }
-

@@ -8,7 +8,7 @@ CREATE TABLE customers
 ( 
 	id 			SERIAL PRIMARY KEY, 
 	first_name 	VARCHAR(50) NOT NULL, 
-	last_name 	VARCHAR(50), 
+	last_name 	VARCHAR(50) NOT NULL,
 	id_status 	INTEGER REFERENCES customer_statuses(id) ON DELETE RESTRICT,
 	id_company 	INTEGER REFERENCES companies(id) ON DELETE RESTRICT, 
 	address 	VARCHAR(50), 

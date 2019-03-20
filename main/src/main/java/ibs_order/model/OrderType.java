@@ -1,4 +1,5 @@
-package com.ibs_order.order.model;
+package ibs_order.model;
+
 
 import javax.persistence.Column;
 import javax.persistence.Entity;
@@ -6,9 +7,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="customer_statuses")
-public class CustomerStatuses {
-
+@Table(name="order_types")
+public class OrderType {
     @Id
     @Column(name="id", nullable=false, unique=true)
     private Integer id;
@@ -16,6 +16,7 @@ public class CustomerStatuses {
 
     @Column(name="name", nullable=false)
     private String name;
+
 
     public Integer getId() {
         return id;
