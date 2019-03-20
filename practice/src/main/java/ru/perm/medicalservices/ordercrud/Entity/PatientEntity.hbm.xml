@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.perm.medicalservices.ordercrud.Entity.PatientEntity" table="Patient" schema="public"
+           catalog="postgres">
+        <id name="idPatient">
+            <column name="ID_Patient" sql-type="integer"/>
+        </id>
+        <property name="pName">
+            <column name="P_Name" sql-type="text"/>
+        </property>
+        <property name="pDob">
+            <column name="P_DOB" sql-type="date"/>
+        </property>
+        <set name="requestsByIdPatient" inverse="true">
+            <key>
+                <column name="ID_Patient" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="ru.perm.medicalservices.ordercrud.Entity.RequestEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

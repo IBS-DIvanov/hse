@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:postgresql://35.233.119.252:5432/postgres</property>
+    <property name="connection.driver_class">org.postgresql.Driver</property>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.ActEntity"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/ActEntity.hbm.xml"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.EmployeeEntity"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/EmployeeEntity.hbm.xml"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/PasswordEntity.hbm.xml"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.PasswordEntity"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/PatientEntity.hbm.xml"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.PatientEntity"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/PostEntity.hbm.xml"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.PostEntity"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/ReferralEntity.hbm.xml"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.ReferralEntity"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.RequestEntity"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/RequestEntity.hbm.xml"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/StatusEntity.hbm.xml"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.StatusEntity"/>
+      <mapping resource="ru/perm/medicalservices/ordercrud/Entity/TypeEntity.hbm.xml"/>
+      <mapping class="ru.perm.medicalservices.ordercrud.Entity.TypeEntity"/>
+      <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

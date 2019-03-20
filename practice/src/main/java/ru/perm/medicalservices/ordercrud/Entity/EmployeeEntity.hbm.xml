@@ -1,0 +1,31 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.perm.medicalservices.ordercrud.Entity.EmployeeEntity" table="Employee" schema="public"
+           catalog="postgres">
+        <id name="eLogin">
+            <column name="E_Login" sql-type="text"/>
+        </id>
+        <property name="eName">
+            <column name="E_Name" sql-type="text"/>
+        </property>
+        <property name="eDob">
+            <column name="E_DOB" sql-type="date"/>
+        </property>
+        <many-to-one name="postByIdPost" class="ru.perm.medicalservices.ordercrud.Entity.PostEntity">
+            <column name="ID_Post" not-null="true"/>
+        </many-to-one>
+        <many-to-one name="passwordByIdPassword" class="ru.perm.medicalservices.ordercrud.Entity.PasswordEntity">
+            <column name="ID_Password" not-null="true"/>
+        </many-to-one>
+        <set name="actsByELogin" inverse="true">
+            <key>
+                <column name="E_Login" not-null="true"/>
+            </key>
+            <one-to-many not-found="ignore" class="ru.perm.medicalservices.ordercrud.Entity.ActEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>

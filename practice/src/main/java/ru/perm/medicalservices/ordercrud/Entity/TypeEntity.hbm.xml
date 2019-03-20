@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+    "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+    "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+
+    <class name="ru.perm.medicalservices.ordercrud.Entity.TypeEntity" table="Type" schema="public" catalog="postgres">
+        <id name="idType">
+            <column name="ID_Type" sql-type="integer"/>
+        </id>
+        <property name="tName">
+            <column name="T_Name" sql-type="text"/>
+        </property>
+        <set name="referralsByIdType" inverse="true">
+            <key>
+                <column name="ID_Type"/>
+            </key>
+            <one-to-many not-found="ignore" class="ru.perm.medicalservices.ordercrud.Entity.ReferralEntity"/>
+        </set>
+    </class>
+</hibernate-mapping>
