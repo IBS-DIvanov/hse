@@ -46,6 +46,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -58,6 +59,15 @@
         <option value="$PROJECT_DIR$/practice/src/main/resources/application.properties" />
         <option value="$PROJECT_DIR$/practice/pom.xml" />
         <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/SwaggerConfig.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/ActRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/EmployeeRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/PasswordRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/PatientRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/PostRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/ReferralRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/RequestRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/StatusRepository.java" />
+        <option value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/TypeRepository.java" />
       </list>
     </option>
   </component>
@@ -147,6 +157,16 @@
               <item name="practice" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ordercrud" type="462c0819:PsiDirectoryNode" />
+              <item name="Entity" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="hse" type="b2602c69:ProjectViewProjectNode" />
+              <item name="hse" type="462c0819:PsiDirectoryNode" />
+              <item name="practice" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -165,7 +185,7 @@
     <property name="Repository.Attach.Sources" value="false" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1552746324430" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1553073437250" />
     <property name="database.console.LAST_STATE" value="true" />
     <property name="last_directory_selection" value="$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/practice/src/main/resources/config.xml" />
@@ -176,6 +196,9 @@
     <property name="project.structure.side.proportion" value="0.2" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="ru.perm.medicalservices.ordercrud.Entity" />
+    </key>
     <key name="ImportMappingsDialog.RecentPackages">
       <recent name="ru.perm.medicalservices.ordercrud.Entity" />
     </key>
@@ -215,18 +238,18 @@
       <workItem from="1552577717710" duration="5256000" />
       <workItem from="1552737751443" duration="3130000" />
       <workItem from="1552809691814" duration="25000" />
-      <workItem from="1553059582270" duration="1657000" />
+      <workItem from="1553059582270" duration="4315000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12271000" />
+    <option name="totallyTimeSpent" value="14929000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <layout>
-      <window_info active="true" id="Persistence" side_tool="true" visible="true" weight="0.3295302" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.18791947" />
+      <window_info id="Persistence" sideWeight="0.50141644" side_tool="true" weight="0.18791947" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49858356" visible="true" weight="0.18791947" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Designer" order="2" />
       <window_info id="Image Layers" order="3" />
@@ -256,7 +279,7 @@
       <window_info anchor="right" id="Maven" order="3" weight="0.21543624" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info anchor="right" id="Capture Analysis" order="5" />
-      <window_info anchor="right" id="Database" order="6" visible="true" weight="0.3295302" />
+      <window_info anchor="right" id="Database" order="6" weight="0.3295302" />
       <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info anchor="right" id="Theme Preview" order="8" />
       <window_info anchor="right" id="Bean Validation" order="9" />
@@ -280,13 +303,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/practice/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="488">
-          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
     <entry file="das://67d588d6-24f2-4a2d-91bd-15a6208564bc/database/postgres/schema/public/table/Act">
       <provider selected="true" editor-type-id="com.intellij.database.editor.DatabaseTableFileEditorProvider">
         <state>
@@ -303,6 +319,59 @@
           <caret line="15" column="19" selection-start-line="15" selection-start-column="19" selection-end-line="15" selection-end-column="19" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="833">
+          <caret line="49" column="32" selection-start-line="49" selection-start-column="32" selection-end-line="49" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/ActEntity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="7" column="13" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/EmployeeRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="73" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/ActRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="20" lean-forward="true" selection-start-line="4" selection-start-column="20" selection-end-line="4" selection-end-column="30" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/PasswordRepository.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="73" selection-start-line="4" selection-start-column="73" selection-end-line="4" selection-end-column="73" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/PatientRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/PostRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/ReferralRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/RequestRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/StatusRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/practice/src/main/java/ru/perm/medicalservices/ordercrud/Entity/TypeRepository.java">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
   </component>
   <component name="masterDetails">
