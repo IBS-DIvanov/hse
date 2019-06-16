@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/hse.iml" filepath="$PROJECT_DIR$/.idea/hse.iml" />
+      <module fileurl="file://$PROJECT_DIR$/practice/reqcrud.iml" filepath="$PROJECT_DIR$/practice/reqcrud.iml" />
     </modules>
   </component>
 </project>
