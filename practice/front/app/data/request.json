@@ -1,0 +1,8 @@
+{
+  "success": true,
+  "request": [
+    {"Req_ID": 1, "Req_Name": "Боль в животе", "Req_Begin_Date": "12/06/18", "Req_End_Date": "21/06/18", "Req_Update_Date": "21/06/18", "Req_Status": "Завершен", "Req_Patient": "Иванов И.И."},
+    {"Req_ID": 2, "Req_Name": "Перелом ноги", "Req_Begin_Date": "20/06/18", "Req_End_Date": "21/10/18", "Req_Update_Date": "21/10/18", "Req_Status": "Завершен", "Req_Patient": "Петров И.И."},
+    {"Req_ID": 3, "Req_Name": "ОРВИ", "Req_Begin_Date": "21/06/18", "Req_End_Date": "20/07/18", "Req_Update_Date": "20/07/18", "Req_Status": "В процессе", "Req_Patient": "Сидоров И.И."}
+  ]
+}
